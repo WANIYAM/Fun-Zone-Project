@@ -3,69 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buy Tickets - FunZone</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+    <title>About Us - FUN ZONE</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;family=Sacramento&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&amp;family=Roboto:wght@700&amp;display=swap"
+        rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/global.css">
-<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-<link rel="stylesheet" href="assets/css/ticket.css">
+    <link rel="stylesheet" href="assets/css/ticket.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/animation.css">
+    <script src="assets/js/data.js"></script>
 </head>
 <body>
-    <!-- Carousel -->
-    <section class="carousel">
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-         
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="assets/images/ticket-main.jpg" alt="">
-                    
-                </div>
-                
-            </div>
-            <div class="overlay">
-                <div class="container d-flex align-items-center justify-content-between position-relative py-2">
-                    <!-- Menu Button -->
-                    <div class="menu d-flex align-items-center text-white">
-                        <i class="fas fa-bars me-2" id="menu-button" style="cursor: pointer;"></i>
-                        <span>MENU</span>
-                    </div>
-                
-                    <!-- Centered Logo -->
-                    
-                            <div class="logo">
-                                <a href="index.html"><img alt="logo" src="assets/images/logo.png" style="height: 70px;"></a>
-                            </div>
-                        
-                    
-                </div>
-                
-                <!-- Fullscreen Overlay Menu -->
-                <div class="menu-overlay" id="menu-overlay">
-                    <span class="close-btn" id="close-btn">
-                        ×
-                       </span>
-                       <a href="experience1.html">
-                        EXPERIENCE
-                       </a>
-                       <a href="leisure.html" class="leisure">
-                        LEISURE & DINNING
-                       </a>
-                       <a href="parkCharacters.html">
-                        PARKS CHARACTERS
-                       </a>
-                       <a href="whatsupp.html">
-                        WHATS UP
-                       </a>
-                       <a href="parkInformation.html">
-                        PARK INFORMATION
-                       </a>
-                       <a href="businessOpportunities.html">
-                        BUSINESS OPPORTUNITIES
-                       </a>
-                      
-                </div>
-    </section>
+    
+     <!-- Navbar -->
 
+     <div class="overlay">
+        <div class="container overlay-container py-0">
+            <!-- Logo on the Left -->
+            <div class="logo">
+                <a href="index.html"><img alt="logo" src="assets/images/logo.png"></a>
+            </div>
+
+            <!-- Menu Button on the Right -->
+            <div class="menu text-white">
+                <i class="fas fa-bars ms-0" id="menu-button"></i>
+    
+            </div>
+        </div>
+        
+        <!-- Fullscreen Overlay Menu -->
+        <div class="menu-overlay" id="menu-overlay">
+            <span class="close-btn text-white" id="close-btn">×</span>
+            <a href="experience1.html">EXPERIENCE</a>
+            <a href="leisure.html" class="leisure">LEISURE & DINING</a>
+            <a href="parkCharacters.html">PARK CHARACTERS</a>
+            <a href="whatsupp.html">WHAT'S UP?</a>
+            <a href="parkInformation.html">PARK INFORMATION</a>
+            <a href="businessOpportunities.html">BUSINESS OPPORTUNITIES</a>
+            <a href="contact.html">CONTACT US</a>
+        </div>
+    </div>
+
+
+  
+
+    <header class="hero fade-in">
+        <div class="container">
+        </div>
+    </header>
+    
     <!-- New Section with Image on Left and Text on Right -->
 <div class="container info-section">
     <div class="row align-items-center">
@@ -86,19 +74,23 @@
         
         <div class="row">
             <div class="col-md-4 mb-4">
-                <div class="ticket-card">
-                    <img src="assets/images/standard.jpg" class="w-30" alt="Standard Ticket">
+                <div class="ticket-card border border-white text-white">
+                    <img src="assets/images/standard.jpg" class="w-30 border border-white
+                    border border-white
+                    border border-white" alt="Standard Ticket">
                     <div class="p-3 ">
                         <h5 id="ticket-name">Standard Ticket</h5>
-                        <p>Access to all rides and attractions for a day.</p>
+                        <p>Access to all rides and attractions for a day get exclusive perks.</p>
                         <h6 id="ticket-price">$49.99</h6>
                         <button class="btn btn-primary" onclick="window.location.href='payment.html?ticket=standard'">Buy Now</button>
                     </div>
                 </div>
             </div>
             <div class="col-md-4 mb-4">
-                <div class="ticket-card">
-                    <img src="assets/images/vip.jpg" class="w-30" alt="VIP Ticket">
+                <div class="ticket-card border border-white text-white">
+                    <img src="assets/images/vip.jpg" class="w-30 border border-white
+                    border border-white
+                    border border-white" alt="VIP Ticket">
                     <div class="p-3 ">
                         <h5>VIP Ticket</h5>
                         <p>Skip the lines, enjoy priority seating, and get exclusive perks.</p>
@@ -108,8 +100,10 @@
                 </div>
             </div>
             <div class="col-md-4 mb-4">
-                <div class="ticket-card">
-                    <img src="assets/images/image-removebg-preview.png" class="w-30" alt="Family Pack">
+                <div class="ticket-card border border-white text-white">
+                    <img src="assets/images/image-removebg-preview.png" class="w-30 border border-white
+                    border border-white
+                    border border-white" alt="Family Pack">
                     <div class="p-3 ">
                         <h5>Family Pack</h5>
                         <p>Perfect for families, includes 4 tickets at a discounted price.</p>
@@ -137,7 +131,7 @@
                     <h1 class="display-4 font-weight-bold mb-2">Frequently Asked Questions</h1>
                     <a href="contact.html" class="text-primary">Contact us</a>
                 </div>
-                <div class="row mt-5 ">
+                <div class="row mt-5">
                     <div class="col-md-8">
                         <div class="list-group faqs-list">
                             <div class="list-group-item d-flex justify-content-between align-items-center question">
@@ -192,6 +186,191 @@
                 </div>
             </div>
         </section>
+
+        <!-- reviews -->
+    <section class="text-white py-5 text-center">
+        <div class="container">
+            <h2 class="mb-4">What Our Visitors Say</h2>
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                <div class="carousel-inner" id="testimonial-container"></div>
+                
+            </div>
+        </div>
+    </section>
+<!-- BRANDS -->
+<section class="scrollable-brands mt-0">
+    <div class="logos">
+      <div class="logo_items" id="logoSlider"></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="text-light py-5 ">
+    <div class="container">
+        <div class="row">
+            <!-- About Section -->
+            <div class="col-md-3 mb-4">
+                <h5 class="fw-bold text-warning">About Fun Zone</h5>
+                <p class="small">
+                    Experience world-class rides, attractions, and entertainment at Fun Zone, the ultimate destination for thrill-seekers!
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-md-3 mb-4">
+                <h5 class="fw-bold text-warning">Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="index.html" class="text-light text-decoration-none">Home</a></li>
+                    <li><a href="about.html" class="text-light text-decoration-none">About</a></li>
+                    <li><a href="ticket.html" class="text-light text-decoration-none">Tickets</a></li>
+                    <li><a href="contact.html" class="text-light text-decoration-none">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="col-md-3 mb-4">
+                <h5 class="fw-bold text-warning">Contact Us</h5>
+                <p class="small mb-1"><i class="fas fa-map-marker-alt text-warning"></i> 123 Fun Zone Avenue, Theme Park City</p>
+                <p class="small mb-1"><i class="fas fa-envelope text-warning"></i> <a href="mailto:info@funzone.com" class="text-light text-decoration-none">info@funzone.com</a></p>
+                <p class="small"><i class="fas fa-phone text-warning"></i> +1 (234) 567-8900</p>
+            </div>
+
+            <!-- Social Media -->
+            <div class="col-md-3 mb-4 text-md-end text-center">
+                <h5 class="fw-bold text-warning">Follow Us</h5>
+                <div class="mt-2">
+                    <a href="www.facebook.com" class="text-light me-3"><i class="fab fa-facebook-f fa-lg"></i></a>
+                    <a href="www.twitter.com" class="text-light me-3"><i class="fab fa-twitter fa-lg"></i></a>
+                    <a href="www.instagram.com" class="text-light"><i class="fab fa-instagram fa-lg"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <hr class="border-light my-4">
+
+        <!-- Copyright -->
+        <div class="text-center small">
+            &copy; 2025 Fun Zone, Inc. | All Rights Reserved.
+        </div>
+    </div>
+</footer>
+        
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const questions = document.querySelectorAll(".question");
+        
+                questions.forEach(question => {
+                    question.addEventListener("click", function () {
+                        const answer = this.nextElementSibling;
+                        const icon = this.querySelector("i");
+                        
+                        if (answer.style.display === "none") {
+                            answer.style.display = "block";
+                            icon.classList.remove("fa-plus");
+                            icon.classList.add("fa-minus");
+                        } else {
+                            answer.style.display = "none";
+                            icon.classList.remove("fa-minus");
+                            icon.classList.add("fa-plus");
+                        }
+                    });
+                });
+            });
+            function generateLogos() {
+    const logoContainer = document.getElementById("logoSlider");
+    let html = "";
+
+    brands.forEach(brand => {
+      html += `<img src="assets/images/brands/
+${brand.img}" alt="${brand.name}">`;
+    });
+
+    // Duplicate logos for infinite scroll effect
+    logoContainer.innerHTML = html + html;
+  }
+
+  generateLogos();
+
+  document.addEventListener("DOMContentLoaded", function () {
+    let testimonialContainer = document.getElementById("testimonial-container");
+    let testimonialHTML = "";
+
+    // Function to determine the number of cards per slide based on screen size
+    function getCardsPerSlide() {
+        const windowWidth = window.innerWidth;
+        if (windowWidth >= 992) { 
+            return 3;
+        } else if (windowWidth >= 768) { 
+            return 2;
+        } else { 
+            return 1;
+        }
+    }
+
+    let cardsPerSlide = getCardsPerSlide();
+
+    for (let i = 0; i < testimonials.length; i += cardsPerSlide) {
+        testimonialHTML += `
+            <div class="carousel-item ${i === 0 ? 'active' : ''}">
+                <div class="row justify-content-center">
+                    ${testimonials.slice(i, i + cardsPerSlide).map(t => `
+                        <div class="col-md-${12 / cardsPerSlide} col-sm-6 col-xs-12"> 
+                            <div class="testimonial-card border border-white p-4">
+                                <div class="d-flex align-items-center mb-3 ">
+                                    
+                                    <div class="w-100 text-center">
+                                        <h5 class="mb-1 text-bolder">${t.name}</h5>
+                                        <small class="text-white d-block">${t.role}</small>
+                                    </div>
+                                </div>
+                                <p>${t.feedback}</p>
+                                <div>${'&#9733;'.repeat(t.rating)}</div>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+        `;
+    }
+
+    testimonialContainer.innerHTML = testimonialHTML;
+
+    // Handle window resize to adjust cards per slide
+    window.addEventListener('resize', () => {
+        const newCardsPerSlide = getCardsPerSlide();
+        if (newCardsPerSlide !== cardsPerSlide) {
+            cardsPerSlide = newCardsPerSlide;
+            // Re-render the carousel with the new number of cards per slide
+            testimonialContainer.innerHTML = ""; 
+            testimonialHTML = ""; 
+            for (let i = 0; i < testimonials.length; i += cardsPerSlide) {
+                testimonialHTML += `
+                    <div class="carousel-item ${i === 0 ? 'active' : ''}">
+                        <div class="row justify-content-center">
+                            ${testimonials.slice(i, i + cardsPerSlide).map(t => `
+                                <div class="col-md-${12 / cardsPerSlide} col-sm-6 col-xs-12"> 
+                                    <div class="testimonial-card p-4">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <div class="w-100 text-center">
+                                        <h5 class="mb-1 text-bolder">${t.name}</h5>
+                                        <small class="text-white d-block">${t.role}</small>
+                                    </div>
+                                        </div>
+                                        <p>${t.feedback}</p>
+                                        <div>${'&#9733;'.repeat(t.rating)}</div>
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+            }
+            testimonialContainer.innerHTML = testimonialHTML;
+        }
+    });
+});
+        </script>
+        
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="assets/js/script.js"></script>
