@@ -3,120 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ride Ticket Detail</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="assets/css/global.css">
+    <title>Ride Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const rideId = urlParams.get("id");
+            
+           
+const rides = [
+    { id: 1, name: "Roller Coaster", category: "thrill", image: "ride1.jpg",  description: "Experience the ultimate thrill with our high-speed roller coaster!", ticket: "10", height: "48 inches", age: "10+", duration: "2 minutes", safety: "Secure all loose items before riding." },
+    { id: 2, name: "Ferris Wheel", category: "major", image: "ride2.jpg",  description: "Enjoy a breathtaking view of the entire park from the top.", ticket: "8 ", height: "No restriction", age: "All ages", duration: "5 minutes", safety: "Remain seated during the ride." },
+    { id: 3, name: "Drop Tower", category: "thrill", image: "ride3.jpg",  description: "Feel the adrenaline rush as you plunge from great heights!", ticket: "12", height: "42 inches", age: "12+", duration: "1 minute", safety: "Keep arms and legs inside the ride." },
+    { id: 4, name: "Bumper Cars", category: "major", image: "ride4.jpg",  description: "Crash and bump your friends in this fun-filled ride!", ticket: "7 ", height: "No restriction", age: "All ages", duration: "3 minutes", safety: "Wear seatbelts at all times." },
+    { id: 5, name: "Log Flume", category: "aqua", image: "ride5.jpg",  description: "Splash down the river on a thrilling log ride!", ticket: "9 ", height: "40 inches", age: "8+", duration: "4 minutes", safety: "Secure all loose items before riding." },
+    { id: 6, name: "Haunted House", category: "major", image: "ride6.jpg",  description: "Dare to enter the haunted house and face your fears!", ticket: "10", height: "No restriction", age: "10+", duration: "5 minutes", safety: "Not recommended for those with heart conditions." },
+    { id: 8, name: "Swinging Ship", category: "thrill", image: "ride8.jpg",  description: "Feel the wind in your hair as you swing back and forth!", ticket: "11", height: "42 inches", age: "10+", duration: "2 minutes", safety: "Keep arms and legs inside the ride." },
+    { id: 9, name: "Virtual Reality Coaster", category: "thrill", image: "ride9.jpg",  description: "Experience a roller coaster like never before with immersive VR technology!", ticket: "15n", height: "48 inches", age: "12+", duration: "3 minutes", safety: "Secure VR headset before riding." },
+    { id: 10, name: "Kiddie Train", category: "kids", image: "ride10.jpg",  description: "A gentle ride perfect for the little ones to enjoy!", ticket: "6 ", height: "No restriction", age: "All ages", duration: "4 minutes", safety: "Children must be accompanied by an adult." },
+    { id: 11, name: "Tea Cups", category: "kids", image: "ride11.jpg", description: "Spin around in colorful tea cups for a whimsical experience!", ticket: "7 ", height: "No restriction", age: "All ages", duration: "3 minutes", safety: "Remain seated during the ride." },
+    { id: 13, name: "Wave Pool", category: "aqua", image: "ride13.jpg",  description: "Enjoy the beach vibes with our exciting wave pool!", ticket: "12", height: "No restriction", age: "All ages", duration: "All day", safety: "Supervision required for children." },
+    { id: 14, name: "Zip Line", category: "thrill", image: "ride14.jpg",  description: "Soar through the air and feel the rush of flying!", ticket: "20", height: "54 inches", age: "12+", duration: "1 minute", safety: "Wear harness securely." },
+    { id: 15, name: "Spinning Coaster", category: "thrill", image: "ride15.jpg",  description: "A unique coaster that spins you around while you race through the track!", ticket: "13", height: "48 inches", age: "10+", duration: "2 minutes", safety: "Keep arms and legs inside the ride." },
+    { id: 17, name: "Kiddie Carousel", category: "kids", image: "ride17.jpg",  description: "A smaller carousel designed just for the little ones!", ticket: "5 ", height: "No restriction", age: "All ages", duration: "3 minutes", safety: "Children must be accompanied by an adult." },
+    { id: 18, name: "Obstacle Course", category: "major", image: "ride18.jpg",  description: "Test your agility and speed in our fun obstacle course!", ticket: "8 ", height: "No restriction", age: "All ages", duration: "5 minutes", safety: "Follow the course rules." },
+    { id: 19, name: "Flying Elephants", category: "kids", image: "ride19.jpg", description: "Fly high on colorful elephants that go up and down!", ticket: "7 ", height: "No restriction", age: "All ages", duration: "3 minutes", safety: "Remain seated during the ride." }
+];
+            
+            const ride = rides.find(r => r.id == rideId);
+            
+            if (ride) {
+                document.getElementById("rideContainer").style.backgroundImage = `url('assets/images/${ride.image}')`;
+                document.getElementById("rideName").textContent = ride.name;
+                document.getElementById("rideDescription").textContent = ride.description;
+                document.getElementById("rideHeight").textContent = `Height Requirement: ${ride.height}`;
+                document.getElementById("rideAge").textContent = `Age Requirement: ${ride.age}`;
+                document.getElementById("rideDuration").textContent = `Duration: ${ride.duration}`;
+                document.getElementById("rideSafety").textContent = `Safety: ${ride.safety}`;
+                document.getElementById("ticketPrice").textContent = `Ticket Price: $${ride.ticket}`;
+            } else {
+                document.getElementById("rideDetails").innerHTML = "<p class='text-center text-danger'>Ride not found.</p>";
+            }
+        });
+    </script>
     <style>
-        
-        .ticket-card {
-            /* background-color: #319795; */
-            border-radius: 10px;
+        #rideContainer {
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.8);
             padding: 20px;
-            margin: 0 auto;
-            width: 50%;
-            border:2px solid white;
-        }
-        .arrow {
-            font-size: 24px;
-            cursor: pointer;
-            color: white;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-        .left-arrow { left: 25%; }
-        .right-arrow { right: 25%; }
-        .ride-info {
-            position: absolute;
-            top: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(0, 0, 0, 0.5);
-            padding: 5px 10px;
-            border-radius: 5px;
+            border-radius: 10px;
         }
     </style>
 </head>
-<body class="d-flex align-items-center justify-content-center min-vh-100">
-    <div class="container">
-        <div class="position-relative mb-4 d-flex align-items-center justify-content-center">
-            <i class="fas fa-chevron-left arrow left-arrow" onclick="prevRide()"></i>
-            <h4 class="ride-info text-center mx-3" id="rideName"></h4>
-            <img id="rideImage" alt="Ride image" class="img-fluid rounded w-50" height="150" style="height: 150px; width: 100%; object-fit: cover;" />
-            <i class="fas fa-chevron-right arrow right-arrow" onclick="nextRide()"></i>
+<body>
+    <div id="rideContainer" class="container-fluid d-flex align-items-center justify-content-center">
+        <div class="card text-center">
+            <h1 id="rideName" class="mb-3"></h1>
+            <p id="rideDescription"></p>
+            <p id="rideHeight"></p>
+            <p id="rideAge"></p>
+            <p id="rideDuration"></p>
+            <p id="rideSafety"></p>
+            <p id="ticketPrice" class="fw-bold"></p>
+            <div id="rideDetails"></div>
+            <button class="btn btn-primary mt-3" onclick="buyTicket()">Buy Ticket</button>
         </div>
-        <div class="ticket-card mb-4 d-flex justify-content-center">
-            <div class="d-flex flex-column align-items-center">
-                <div class="text-center">
-                    <div id="duration"></div>
-                    <div id="safety"></div>
-                    <div id="heightRequirement"></div>
-                    <div id="ageRequirement"></div>
-                </div>
-                <div class="h5 font-weight-bold mx-3" id="rideCost"></div>
-            </div>
-        </div>
-        <div class="mb-4 text-center">
-            <button class="btn border border-white w-50" style="background-color: #319795; border: none;" onclick="bookTicket()">Book Now</button>
-        </div>
-        
     </div>
-    <script>
-              const rides = [
-    { id: 1, name: "Roller Coaster", category: "thrill", image: "assets/images/ride1.jpg", video: "assets/videos/ride vd1.mp4", description: "Experience the ultimate thrill with our high-speed roller coaster!", ticket: "10", height: "48 inches", age: "10+", duration: "2 minutes", safety: "Secure all loose items before riding." },
-    { id: 2, name: "Ferris Wheel", category: "major", image: "assets/images/ride2.jpg", video: "assets/videos/ride vd2.mp4", description: "Enjoy a breathtaking view of the entire park from the top.", ticket: "8 ", height: "No restriction", age: "All ages", duration: "5 minutes", safety: "Remain seated during the ride." },
-    { id: 3, name: "Drop Tower", category: "thrill", image: "assets/images/ride3.jpg", video: "assets/videos/ride vd3.mp4", description: "Feel the adrenaline rush as you plunge from great heights!", ticket: "12", height: "42 inches", age: "12+", duration: "1 minute", safety: "Keep arms and legs inside the ride." },
-    { id: 4, name: "Bumper Cars", category: "major", image: "assets/images/ride4.jpg", video: "assets/videos/ride vd4.mp4", description: "Crash and bump your friends in this fun-filled ride!", ticket: "7 ", height: "No restriction", age: "All ages", duration: "3 minutes", safety: "Wear seatbelts at all times." },
-    { id: 5, name: "Log Flume", category: "aqua", image: "assets/images/ride5.jpg", video: "assets/videos/ride vd5.mp4", description: "Splash down the river on a thrilling log ride!", ticket: "9 ", height: "40 inches", age: "8+", duration: "4 minutes", safety: "Secure all loose items before riding." },
-    { id: 6, name: "Haunted House", category: "major", image: "assets/images/ride6.jpg", video: "assets/videos/ride vd6.mp4", description: "Dare to enter the haunted house and face your fears!", ticket: "10", height: "No restriction", age: "10+", duration: "5 minutes", safety: "Not recommended for those with heart conditions." },
-    { id: 7, name: "Merry-Go-Round", category: "major", image: "assets/images/ride7.jpg", video: "assets/videos/ride vd7.mp4", description: "A classic ride for all ages, featuring beautifully painted horses.", ticket: "5 ", height: "No restriction", age: "All ages", duration: "3 minutes", safety: "Remain seated during the ride." },
-    { id: 8, name: "Swinging Ship", category: "thrill", image: "assets/images/ride8.jpg", video: "assets/videos/ride vd8.mp4", description: "Feel the wind in your hair as you swing back and forth!", ticket: "11", height: "42 inches", age: "10+", duration: "2 minutes", safety: "Keep arms and legs inside the ride." },
-    { id: 9, name: "Virtual Reality Coaster", category: "thrill", image: "assets/images/ride9.jpg", video: "assets/videos/ride vd9.mp4", description: "Experience a roller coaster like never before with immersive VR technology!", ticket: "15n", height: "48 inches", age: "12+", duration: "3 minutes", safety: "Secure VR headset before riding." },
-    { id: 10, name: "Kiddie Train", category: "kids", image: "assets/images/ride10.jpg", video: "assets/videos/ride vd10.mp4", description: "A gentle ride perfect for the little ones to enjoy!", ticket: "6 ", height: "No restriction", age: "All ages", duration: "4 minutes", safety: "Children must be accompanied by an adult." },
-    { id: 11, name: "Tea Cups", category: "kids", image: "assets/images/ride11.jpg", video: "assets/videos/ride vd11.mp4", description: "Spin around in colorful tea cups for a whimsical experience!", ticket: "7 ", height: "No restriction", age: "All ages", duration: "3 minutes", safety: "Remain seated during the ride." },
-    { id: 12, name: "Sky Ride", category: "major", image: "assets/images/ride12.jpg", video: "assets/videos/ride vd12.mp4", description: "Glide above the park and take in the stunning views!", ticket: "9 ", height: "No restriction", age: "All ages", duration: "5 minutes", safety: "Keep arms and legs inside the ride." },
-    { id: 13, name: "Wave Pool", category: "aqua", image: "assets/images/ride13.jpg", video: "assets/videos/ride vd13.mp4", description: "Enjoy the beach vibes with our exciting wave pool!", ticket: "12", height: "No restriction", age: "All ages", duration: "All day", safety: "Supervision required for children." },
-    { id: 14, name: "Zip Line", category: "thrill", image: "assets/images/ride14.jpg", video: "assets/videos/ride vd14.mp4", description: "Soar through the air and feel the rush of flying!", ticket: "20", height: "54 inches", age: "12+", duration: "1 minute", safety: "Wear harness securely." },
-    { id: 15, name: "Spinning Coaster", category: "thrill", image: "assets/images/ride15.jpg", video: "assets/videos/ride vd15.mp4", description: "A unique coaster that spins you around while you race through the track!", ticket: "13", height: "48 inches", age: "10+", duration: "2 minutes", safety: "Keep arms and legs inside the ride." },
-    { id: 16, name: "Rock Climbing Wall", category: "major", image: "assets/images/ride16.jpg", video: "assets/videos/ride vd16.mp4", description: "Challenge yourself on our indoor rock climbing wall!", ticket: "10", height: "No restriction", age: "All ages", duration: "5 minutes", safety: "Harness must be worn at all times." },
-    { id: 17, name: "Kiddie Carousel", category: "kids", image: "assets/images/ride17.jpg", video: "assets/videos/ride vd17.mp4", description: "A smaller carousel designed just for the little ones!", ticket: "5 ", height: "No restriction", age: "All ages", duration: "3 minutes", safety: "Children must be accompanied by an adult." },
-    { id: 18, name: "Obstacle Course", category: "major", image: "assets/images/ride18.jpg", video: "assets/videos/ride vd118.mp4", description: "Test your agility and speed in our fun obstacle course!", ticket: "8 ", height: "No restriction", age: "All ages", duration: "5 minutes", safety: "Follow the course rules." },
-    { id: 19, name: "Flying Elephants", category: "kids", image: "assets/images/ride19.jpg", video: "assets/videos/ride vd20.mp4", description: "Fly high on colorful elephants that go up and down!", ticket: "7 ", height: "No restriction", age: "All ages", duration: "3 minutes", safety: "Remain seated during the ride." }
-];
-        let currentIndex = 0;
-
-        function updateRide() {
-            const ride = rides[currentIndex];
-            document.getElementById('rideName').innerText = ride.name;
-            document.getElementById('rideImage').src = ride.image;
-            document.getElementById('rideCost').innerText = `$${ride.ticket}`;
-            document.getElementById('duration').innerText = `Duration: ${ride.duration}`;
-            document.getElementById('safety').innerText = `Safety: ${ride.safety}`;
-            document.getElementById('heightRequirement').innerText = `Height Requirement: ${ride.height}`;
-            document.getElementById('ageRequirement').innerText = `Age Requirement: ${ride.age}`;
-        }
-
-        function prevRide() {
-            currentIndex = (currentIndex - 1 + rides.length) % rides.length;
-            updateRide();
-        }
-
-        function nextRide() {
-            currentIndex = (currentIndex + 1) % rides.length;
-            updateRide();
-        }
-
-        function bookTicket() {
-            alert(`Ticket booked for ${document.getElementById('rideName').innerText}.`);
-        }
-
-        function moreInfoPage() {
-            window.location.href = `info.html?ride=${encodeURIComponent(rides[currentIndex].name)}`;
-        }
-
-        updateRide();
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

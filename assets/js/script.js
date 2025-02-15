@@ -233,7 +233,7 @@ function displayRides(rideList) {
         col.className = "col-md-4";
         col.innerHTML = `
             <div class="card ride-card mb-5" onclick="goToRideDetail(${ride.id})">
-                <img src="${ride.image}" class="card-img-top" alt="${ride.name}">
+                <img src="assets/images/${ride.image}" class="card-img-top " alt="${ride.name}">
                 <div class="ride-overlay flex d-flex flex-direction-row gap-3">
                     <div class="ride-title">${ride.name}</div> <!-- Title is now in the overlay -->
                     <button class="btn btn-warning mt-2" onclick="buyTicket(); event.stopPropagation();">Buy Ticket</button>
@@ -251,12 +251,12 @@ function filterRides(category) {
 }
 
 function goToRideDetail(id) {
-    window.location.href = `ticket.html?id=${id}`;
+    window.location.href = `ridesDetail.html?id=${id}`;
 }
 
 function buyTicket(rideId) {
     
-    window.location.href = `ticket.html?rideId=${rideId}`;
+    window.location.href = `tiCKET.html?rideId=${rideId}`;
 }
 
 // Load all rides initially
