@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rides - Amusement Park</title>
+     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/rides.css">
+    
+</head>
+<body>
+    <!-- Carousel -->
+    <section class="carousel">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="assets/images/ridecarousel1.jpg" alt="">
+                    <div class="carousel-caption">
+                        <h1>Thrilling Rides Await You!</h1>
+                        <p> Get ready for an unforgettable adventure</p>
+                        <a href="#" class="read-more-btn">Read More</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/images/ridecarousel2.jpg" alt="">
+                    <div class="carousel-caption">
+                        <h1>Thrilling Rides Await You!</h1>
+                        <p> Get ready for an unforgettable adventure</p>
+                        <a href="#" class="read-more-btn">Read More</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/images/ridecarousel3.jpg" alt="">
+                    <div class="carousel-caption">
+                        <h1>Thrilling Rides Await You!</h1>
+                        <p> Get ready for an unforgettable adventure</p>
+                        <a href="#" class="read-more-btn">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <div class="overlay">
+            <div class="container d-flex align-items-center justify-content-between position-relative py-2">
+                <!-- Menu Button -->
+                <div class="menu d-flex align-items-center">
+                    <i class="fas fa-bars me-2" id="menu-button" style="cursor: pointer;"></i>
+                    <span>MENU</span>
+                </div>
+            
+                <!-- Centered Logo -->
+                <div class="logo position-absolute start-50 translate-middle-x">
+                    <a href="index.html"><img alt="logo" src="assets/images/logo.png" style="height: 70px;"></a>
+                </div>
+            </div>
+            
+            <!-- Fullscreen Overlay Menu -->
+            <div class="menu-overlay" id="menu-overlay">
+                <span class="close-btn" id="close-btn">×</span>
+                <a href="experience1.html">EXPERIENCE</a>
+                <a href="leisure.html" class="leisure">LEISURE & DINING</a>
+                <a href="#">PARKS CHARACTERS</a>
+                <a href="whatsupp.html">WHATS UP</a>
+                <a href="#">PARK INFORMATION</a>
+                <a href="#">BUSINESS OPPORTUNITIES</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ride Categories -->
+    <section class="category text-white">
+        <div class="text-center py-5">
+            <h1 class="display-4 font-weight-bold">Rides</h1>
+            <p class="mt-4 lead mx-auto" style="max-width: 600px;">
+                Embark on a journey of exhilaration and wonder! From dizzying spins to heart-racing drops, our theme park rides promise thrills for all ages. Dive into the magic, and let the adventure unfold!
+            </p>
+        </div>
+        <div class="container ride-category">
+            <div class="row justify-content-center">
+                <div class="col-md-3 mb-4" onclick="filterRides('kids')">
+                    <div class="ride-card border-warning">
+                        <img alt="Kids riding a carousel" src="assets/images/kids1.jpg"/>
+                        <div class="ride-title">KIDS RIDES</div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4" onclick="filterRides('major')">
+                    <div class="ride-card border-info">
+                        <img alt="Major ride with a super train" src="assets/images/major.jpg"/>
+                        <div class="ride-title">MAJOR RIDES</div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4" id="aqua-ride" onclick="filterRides('aqua')">
+                    <div class="ride-card border-danger">
+                        <img alt="Aqua ride with a water slide" src="assets/images/aqua.jpg"/>
+                        <div class="ride-title">AQUA RIDES</div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4" onclick="filterRides('thrill')">
+                    <div class="ride-card border-success">
+                        <img alt="Thrill ride with people on a high ride" src="assets/images/thrill.jpg"/>
+                        <div class="ride-title">THRILL RIDES</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rides Grid -->
+    <div class="row" id="rideGrid" style="display: none;"></div>
+
+    <!-- FAQS -->
+    <section class="text-white section-faqs">
+        <div class="container py-4">
+            <div class="text-center">
+                <h1 class="display-4 font-weight-bold mb-2">Frequently Asked Questions</h1>
+                <a href="contact.html" class="text-primary">Contact us</a>
+            </div>
+            <div class="row mt-5 ">
+                <div class="col-md-8">
+                    <div class="list-group faqs-list">
+                        <div class="list-group-item d-flex justify-content-between align-items-center question">
+                            What are the height requirements for the rides?
+                            <i class="fas fa-plus text-primary"></i>
+                        </div>
+                        <div class="answer" style="display: none;">Height requirements vary by ride. Please check the specific ride's information for details.</div>
+    
+                        <div class="list-group-item d-flex justify-content-between align-items-center question">
+                            Are there any age restrictions for certain rides?
+                            <i class="fas fa-plus text-primary"></i>
+                        </div>
+                        <div class="answer" style="display: none;">Yes, some rides have age restrictions for safety reasons.</div>
+    
+                        <div class="list-group-item d-flex justify-content-between align-items-center question">
+                            How can I find out the wait times for rides?
+                            <i class="fas fa-plus text-primary"></i>
+                        </div>
+                        <div class="answer" style="display: none;">You can check the wait times on our mobile app or at the ride entrance.</div>
+    
+                        <div class="list-group-item d-flex justify-content-between align-items-center question">
+                            Are there any rides suitable for young children?
+                            <i class="fas fa-plus text-primary"></i>
+                        </div>
+                        <div class="answer" style="display: none;">Yes, we have several rides designed specifically for young children.</div>
+    
+                        <div class="list-group-item d-flex justify-content-between align-items-center question">
+                            What safety measures are in place for the rides?
+                            <i class="fas fa-plus text-primary"></i>
+                        </div>
+                        <div class="answer" style="display: none;">We have strict safety protocols and regular inspections for all rides.</div>
+    
+                        <div class="list-group-item d-flex justify-content-between align-items-center question">
+                            Can I bring my own food and drinks on the rides?
+                            <i class="fas fa-plus text-primary"></i>
+                        </div>
+                        <div class="answer" style="display: none;">Outside food and drinks are not allowed on the rides for safety and cleanliness reasons.</div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-5 mt-md-0">
+                    <div class="text-center">
+                        <img src="assets/images/logo.png" alt="Illustration of a person with question marks" class="img-fluid mb-4">
+                        <h2 class="h4 font-weight-bold mb-2">Any Question?</h2>
+                        <p class="text-white mb-4">You can ask anything you want to know about our rides.</p>
+                        <div class="form-group">
+                            <label for="question" class="sr-only">Let me know.</label>
+                            <input type="text" class="form-control" id="question" placeholder="Enter Here">
+                        </div>
+                        <button class="btn btn-primary px-4 py-2">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+         <script src="assets/js/bootstrap.bundle.min.js"></script>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/data.js"></script>
+</body>
+</html>

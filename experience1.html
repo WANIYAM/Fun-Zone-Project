@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/experience.css">
+    <link rel="stylesheet" href="assets/css/experience.css">
+    <!-- <script src="assets/js/data.js"></script> -->
+   
+    
+</head>
+<body>
+
+    <div class="overlay">
+        <div class="container overlay-container py-0">
+            <!-- Logo on the Left -->
+            <div class="logo">
+                <a href="index.html"><img alt="logo" src="assets/images/logo.png"></a>
+            </div>
+
+            <!-- Menu Button on the Right -->
+            <div class="menu">
+                <i class="fas fa-bars ms-0" id="menu-button"></i>
+    
+            </div>
+        </div>
+        
+        <!-- Fullscreen Overlay Menu -->
+        <div class="menu-overlay" id="menu-overlay">
+            <span class="close-btn" id="close-btn">×</span>
+            <a href="experience1.html">EXPERIENCE</a>
+            <a href="leisure.html" class="leisure">LEISURE & DINING</a>
+            <a href="parkCharacters.html">PARK CHARACTERS</a>
+            <a href="whatsupp.html">WHAT'S UP</a>
+            <a href="parkInformation.html">PARK INFORMATION</a>
+            <a href="businessOpportunities.html">BUSINESS OPPORTUNITIES</a>
+            <a href="contact.html">CONTACT US</a>
+        </div>
+    </div>
+
+    <main>
+        <div>
+            <h1>Experience</h1>
+            <h1>the Thrill!</h1>
+            <hr>
+            <p>Embark on an Unforgettable Adventure at FUN ZONE!</p>
+            <a href="#map">View Park Map</a>
+        </div>
+        <div class="swiper">
+            <div class="swiper-wrapper" id="swiper-wrapper">
+                <!-- Slides will be generated here -->
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </main>
+    
+         <!-- Map Section -->
+<section class="container section-map" id="map">
+    <h2>Interactive Park Map</h2>
+    
+    <!-- Navigation above the map -->
+    <div class="map-container">
+        <nav class="custom-nav">
+            <ul class="custom-nav" id="map-nav">
+                <!-- Items will be generated dynamically -->
+            </ul>
+        </nav>
+        
+        <!-- Map Image and Pins -->
+        <div class="position-relative">
+            <img alt="Illustration of an amusement park with various rides, shops, and attractions" 
+                class="w-100"  src="assets/images/map-removebg.png"/>
+            <div id="pins-container" class="position-absolute w-100 h-100"></div>
+        </div>
+    </div>
+</section>
+
+<!-- reviews -->
+
+<section class="text-white py-5 text-center">
+    <div class="container">
+        <h2 class="mb-4">What Our Visitors Say</h2>
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="carousel-inner" id="testimonial-container"></div>
+            
+        </div>
+    </div>
+</section>
+<!-- footer -->
+<footer class="text-light py-5">
+    <div class="container">
+        <div class="row">
+            <!-- About Section -->
+            <div class="col-md-3 mb-4">
+                <h5 class="fw-bold text-warning">About Fun Zone</h5>
+                <p class="small">
+                    Experience world-class rides, attractions, and entertainment at Fun Zone, the ultimate destination for thrill-seekers!
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-md-3 mb-4">
+                <h5 class="fw-bold text-warning">Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="index.html" class="text-light text-decoration-none">Home</a></li>
+                    <li><a href="about.html" class="text-light text-decoration-none">About</a></li>
+                    <li><a href="ticket.html" class="text-light text-decoration-none">Tickets</a></li>
+                    <li><a href="contact.html" class="text-light text-decoration-none">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="col-md-3 mb-4">
+                <h5 class="fw-bold text-warning">Contact Us</h5>
+                <p class="small mb-1"><i class="fas fa-map-marker-alt text-warning"></i> 123 Fun Zone Avenue, Theme Park City</p>
+                <p class="small mb-1"><i class="fas fa-envelope text-warning"></i> <a href="mailto:info@funzone.com" class="text-light text-decoration-none">info@funzone.com</a></p>
+                <p class="small"><i class="fas fa-phone text-warning"></i> +1 (234) 567-8900</p>
+            </div>
+
+            <!-- Social Media -->
+            <div class="col-md-3 mb-4 text-md-end text-center">
+                <h5 class="fw-bold text-warning">Follow Us</h5>
+                <div class="mt-2">
+                    <a href="www.facebook.com" class="text-light me-3"><i class="fab fa-facebook-f fa-lg"></i></a>
+                    <a href="www.twitter.com" class="text-light me-3"><i class="fab fa-twitter fa-lg"></i></a>
+                    <a href="www.instagram.com" class="text-light"><i class="fab fa-instagram fa-lg"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <hr class="border-light my-4">
+
+        <!-- Copyright -->
+        <div class="text-center small">
+            &copy; 2025 Fun Zone, Inc. | All Rights Reserved.
+        </div>
+    </div>
+</footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="assets/js/data.js"></script> -->
+    <!-- <script src="assets/js/script.js"></script> -->
+    <script>
+         // Menu button functionality
+         const menuButton = document.getElementById("menu-button");
+        const menuOverlay = document.getElementById("menu-overlay");
+        const closeButton = document.getElementById("close-btn");
+
+        menuButton.addEventListener("click", () => {
+            menuOverlay.style.display = "flex";
+        });
+
+        closeButton.addEventListener("click", () => {
+            menuOverlay.style.display = "none";
+        });
+
+        // Array of objects containing aquatic experience data
+        const experience = [
+    {
+        name: "7 Wonders of the World Zone",
+        description: "Travel the World in a Single Day!",
+        imageUrl: "7-wonders-of-the-World-Zone.avif",
+        link: "7-wonders.html"
+    },
+    {
+        name: "Water World Zone",
+        description: "Dive into an aquatic adventure with wave pools, thrilling water slides, and a lazy river for ultimate relaxation!",
+        imageUrl: "water-zone.jpg",
+        link: "waterzone.html"
+    },
+    {
+        name: "Rides Zone",
+        description: "Heart-Pounding Action for Adrenaline Junkies!",
+        imageUrl: "thrill-rides.jpg",
+        link: "rides.html"
+    },
+    {
+        name: "Wild Safari Zone",
+        description: "Embark on an exciting journey through the wild, featuring exotic animals, thrilling jungle rides, and an immersive safari experience!",
+        imageUrl: "Wild-Safari-Zone.jpg",
+        link: "wild-safari.html"
+    },
+    {
+        name: "Fantasy Kingdom Zone",
+        description: "A Magical World for Kids and Families!",
+        imageUrl: "7-wonders.jpeg",
+        link: "fantasy.html"
+    },
+    {
+        name: "Shopping Zone",
+        description: "Explore a variety of souvenir shops, themed merchandise, and exclusive collectibles to take home a piece of the Fun Zone magic!",
+        imageUrl: "Shopping-Zone.jpg",
+        link: "shoppingzone.html"
+    },
+    
+    {
+        name: "Food & Leisure",
+        description: "Refuel with delicious meals, refreshing drinks, and international cuisines at our grand food court.",
+        imageUrl: "Food-&-Leisure.jpg",
+        link: "leisure.html"
+    }
+];
+
+        // Function to generate slides
+        function generateSlides() {
+            const swiperWrapper = document.getElementById('swiper-wrapper');
+            experience.forEach((experience, index) => {
+                const slide = document.createElement('div');
+                slide.className = `swiper-slide`;
+                slide.style.backgroundImage = `url(assets/images/${experience.imageUrl})`; 
+                slide.innerHTML = `
+                    <div>
+                        <h2>${experience.name}</h2>
+                        <p>${experience.description}</p>
+                        <a href="${experience.link}" target="_blank">explore</a>
+                    </div>
+                `;
+                swiperWrapper.appendChild(slide);
+            });
+        }
+
+        // Initialize Swiper
+        function initSwiper() {
+            var swiper = new Swiper(".swiper", {
+                effect: "coverflow",
+                grabCursor: true,
+                centeredSlides: true,
+                coverflowEffect: {
+                    rotate: 0,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 3,
+                    slideShadows: true
+                },
+                keyboard: {
+                    enabled: true
+                },
+                mousewheel: {
+                    thresholdDelta: 70
+                },
+                loop: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true
+                },
+                autoplay: {
+                    delay: 2000,
+                    disableOnInteraction: false
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 2
+                    },
+                    768: {
+                        slidesPerView: 1
+                    },
+                    1024: {
+                        slidesPerView: 2
+                    },
+                    1560: {
+                        slidesPerView: 3
+                    }
+                }
+            });
+        }
+
+        // Call functions
+        generateSlides();
+        initSwiper();
+
+        // map
+
+
+    // Define sections with multiple pin locations
+    const sections = [
+        { id: "7wonders", name: "WONDERZONE" },
+        { id: "waterworld", name: "AQUAZONE" },
+        { id: "thrillrides", name: "RIDES" },
+        { id: "wildsafari", name: "SAFARI" },
+        { id: "fantasy", name: "FANTASY" },
+        { id: "shopping", name: "SHOP" },
+        { id: "food", name: "FLAVOR" },
+    ];
+
+    // Navigation container
+    const navContainer = document.getElementById("map-nav");
+
+    // Generate navigation links dynamically
+    sections.forEach(sec => {
+        const listItem = document.createElement("li");
+        listItem.classList.add("nav-item");
+
+        const link = document.createElement("a");
+        // link.href = "";
+        link.classList.add("nav-link");
+        link.innerText = sec.name;
+        link.onclick = function () {
+            movePins(sec.id, this);
+        };
+
+        listItem.appendChild(link);
+        navContainer.appendChild(listItem);
+    });
+
+    // Define multiple locations per section
+    const locations = {
+        "7wonders": [
+            { top: "-50%", left: "60%", name: "7 Wonders Zone" },
+            
+        ],
+        "waterworld": [
+            { top: "-46%", left: "23%", name: "Water Slide" },
+            { top: "-35%", left: "96%", name: "Wave Pool" },
+        ],
+        "thrillrides": [
+            { top: "-60%", left: "80%", name: "Roller Coaster" },
+            { top: "-45%", left: "13%", name: "Drop Tower" },
+            { top: "-45%", left: "40%", name: "Spinning Ride" },
+        ],
+        "wildsafari": [
+            { top: "-51%", left: "15%", name: "Wild Safari" },
+            
+        ],
+        "fantasy": [
+            { top: "-50%", left: "34%", name: "Fairy Tale Castle" },
+           
+        ],
+        "shopping": [
+            { top: "-30%", left: "44%", name: "Souvenir Shop" },
+            { top: "-30%", left: "64%", name: "Gift Emporium" },
+            { top: "-80%", left: "66%", name: "Clothing Store" },
+        ],
+        "mascots": [
+            { top: "-37%", left: "46%", name: "Mascot Meet & Greet" },
+            { top: "-29%", left: "70%", name: "Parade Route" },
+            { top: "52%", left: "68%", name: "Character Photo Spot" },
+        ],
+        "food": [
+            { top: "-45%", left: "50%", name: "Food Court" },
+            { top: "-45%", left: "67%", name: "Ice Cream Parlor" },
+            { top: "72%", left: "52%", name: "BBQ Grill" },
+        ],
+    };
+    // Function to move pins on the map
+    function movePins(section, element) {
+        // Remove active class from all links
+        document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+        element.classList.add('active');
+
+        const pinsContainer = document.getElementById("pins-container");
+        pinsContainer.innerHTML = ""; // Clear existing pins
+
+        // Add multiple pins if available
+        if (locations[section]) {
+            locations[section].forEach(loc => {
+                const pin = document.createElement("div");
+                pin.className = "pin";
+                pin.style.top = loc.top;
+                pin.style.left = loc.left;
+                pin.style.position = "absolute";
+
+                const label = document.createElement("div");
+                label.className = "pin-label";
+                label.innerText = loc.name;
+
+                pin.appendChild(label);
+                pin.onclick = () => {
+                    label.style.display = label.style.display === "block" ? "none" : "block";
+                };
+
+                pinsContainer.appendChild(pin);
+            });
+        }
+    }
+
+// reviews
+const testimonials = [
+    { name: "Emily Carter", role: "Theme Park Enthusiast", rating: 5, feedback: "Rollercoasters are absolutely thrilling!Best amusement park experience ever!" },
+    { name: "Jake Thompson", role: "Father of Two", rating: 5, feedback: "Perfect family getaway! The kids loved every ride, and the staff was amazing." },
+    { name: "Sophia Reyes", role: "Adventurer", rating: 4, feedback: "So many exciting rides! The food options were great too. Can't wait to visit again." },
+    { name: "Michael Johnson", role: "Annual Pass Holder", rating: 5, feedback: "I visit every year, and it keeps getting better! The new water ride is incredible!" },
+    { name: "Lisa Brown", role: "Thrill Seeker", rating: 5, feedback: "Best theme park ever! From the rides to the shows, everything was top-notch!" },
+    { name: "David Wilson", role: "First-Time Visitor ", rating: 4, feedback: "Amazing experience! The Ferris wheel view was breathtaking." },
+    { name: "Olivia Martinez", role: "Food Lover", rating: 5, feedback: "The food court had so many delicious options. The funnel cake was my favorite!" },
+    { name: "Ryan Parker", role: "Water Park Fan ", rating: 5, feedback: "The water slides were insane! Definitely coming back in the summer." },
+    { name: "Samantha Lee", role: "Teenager", rating: 4, feedback: "Loved the haunted house and VR rides! Best day ever!" },
+    { name: "Chris Evans", role: "Grandfather",   rating: 5, feedback: "Brought my grandkids here, and they had the time of their lives!" },
+];
+document.addEventListener("DOMContentLoaded", function () {
+    let testimonialContainer = document.getElementById("testimonial-container");
+    let testimonialHTML = "";
+
+    // Function to determine the number of cards per slide based on screen size
+    function getCardsPerSlide() {
+        const windowWidth = window.innerWidth;
+        if (windowWidth >= 992) { 
+            return 3;
+        } else if (windowWidth >= 768) { 
+            return 2;
+        } else { 
+            return 1;
+        }
+    }
+
+    let cardsPerSlide = getCardsPerSlide();
+
+    for (let i = 0; i < testimonials.length; i += cardsPerSlide) {
+        testimonialHTML += `
+            <div class="carousel-item ${i === 0 ? 'active' : ''}">
+                <div class="row justify-content-center">
+                    ${testimonials.slice(i, i + cardsPerSlide).map(t => `
+                        <div class="col-md-${12 / cardsPerSlide} col-sm-6 col-xs-12"> 
+                            <div class="testimonial-card border border-white p-4">
+                                <div class="d-flex align-items-center mb-3 ">
+                                    
+                                    <div class="w-100 text-center">
+                                        <h5 class="mb-1 text-bolder">${t.name}</h5>
+                                        <small class="text-white d-block">${t.role}</small>
+                                    </div>
+                                </div>
+                                <p>${t.feedback}</p>
+                                <div>${'&#9733;'.repeat(t.rating)}</div>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+        `;
+    }
+
+    testimonialContainer.innerHTML = testimonialHTML;
+
+    // Handle window resize to adjust cards per slide
+    window.addEventListener('resize', () => {
+        const newCardsPerSlide = getCardsPerSlide();
+        if (newCardsPerSlide !== cardsPerSlide) {
+            cardsPerSlide = newCardsPerSlide;
+            // Re-render the carousel with the new number of cards per slide
+            testimonialContainer.innerHTML = ""; 
+            testimonialHTML = ""; 
+            for (let i = 0; i < testimonials.length; i += cardsPerSlide) {
+                testimonialHTML += `
+                    <div class="carousel-item ${i === 0 ? 'active' : ''}">
+                        <div class="row justify-content-center">
+                            ${testimonials.slice(i, i + cardsPerSlide).map(t => `
+                                <div class="col-md-${12 / cardsPerSlide} col-sm-6 col-xs-12"> 
+                                    <div class="testimonial-card p-4">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <div class="w-100 text-center">
+                                        <h5 class="mb-1 text-bolder">${t.name}</h5>
+                                        <small class="text-white d-block">${t.role}</small>
+                                    </div>
+                                        </div>
+                                        <p>${t.feedback}</p>
+                                        <div>${'&#9733;'.repeat(t.rating)}</div>
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+            }
+            testimonialContainer.innerHTML = testimonialHTML;
+        }
+    });
+});
+    </script>
+</body>
+</html>

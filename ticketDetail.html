@@ -1,0 +1,101 @@
+<html>
+ <head>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/css/global.css">
+  <style>
+  
+   .ticket-card {
+    background-color: #319795;
+    border-radius: 10px;
+    padding: 20px;
+   }
+   .date-card, .time-card {
+    background-color: #2d3748;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+   }
+   .selected {
+    background-color: #319795 !important;
+   }
+  </style>
+ </head>
+ <body class="d-flex align-items-center justify-content-center min-vh-100">
+  <div class="container">
+   <div class="d-flex justify-content-between align-items-center mb-4">
+    <i class="fas fa-bars fa-lg"></i>
+    <span class="h4 font-weight-bold">Railways</span>
+    <i class="fas fa-ellipsis-v fa-lg"></i>
+   </div>
+   <div class="position-relative mb-4">
+    <img alt="Train image" class="img-fluid rounded" src="https://placehold.co/300x150" style="height: 150px; width: 100%; object-fit: cover;"/>
+    <div class="position-absolute w-100 h-100 d-flex justify-content-between align-items-center px-2" style="top: 0;">
+     <i class="fas fa-chevron-left fa-2x"></i>
+     <i class="fas fa-chevron-right fa-2x"></i>
+    </div>
+   </div>
+   <div class="ticket-card mb-4">
+    <div class="d-flex justify-content-between align-items-center">
+     <div>
+      <div class="h5 font-weight-bold">YT City - NF City</div>
+      <div class="small">Total length: 250 km</div>
+      <div class="small">Duration: 7h 30 min</div>
+     </div>
+     <div class="h5 font-weight-bold">$ 78</div>
+    </div>
+   </div>
+   <div class="mb-4">
+    <div class="d-flex justify-content-between align-items-center mb-2">
+     <span>Date</span>
+     <span>April</span>
+    </div>
+    <div class="d-flex justify-content-between" id="date-container">
+     <div class="date-card">10 Mon</div>
+     <div class="date-card">11 Tue</div>
+     <div class="date-card">12 Wed</div>
+     <div class="date-card">13 Thu</div>
+     <div class="date-card selected">14 Fri</div>
+     <div class="date-card">15 Sat</div>
+     <div class="date-card">16 Sun</div>
+    </div>
+   </div>
+   <div class="mb-4">
+    <div class="mb-2">Time</div>
+    <div class="d-flex justify-content-between" id="time-container">
+     <div class="time-card selected">08:00 AM</div>
+     <div class="time-card">12:00 PM</div>
+     <div class="time-card">04:00 PM</div>
+     <div class="time-card">08:00 PM</div>
+    </div>
+   </div>
+   <div class="d-flex justify-content-between">
+    <button class="btn btn-teal w-100 mr-2" style="background-color: #319795; border: none;" id="book-btn">Book Now</button>
+    <button class="btn btn-dark w-100" style="background-color: #2d3748; border: none;">More Info</button>
+   </div>
+  </div>
+  <script>
+   document.querySelectorAll('.date-card').forEach(card => {
+    card.addEventListener('click', function() {
+     document.querySelectorAll('.date-card').forEach(c => c.classList.remove('selected'));
+     this.classList.add('selected');
+    });
+   });
+
+   document.querySelectorAll('.time-card').forEach(card => {
+    card.addEventListener('click', function() {
+     document.querySelectorAll('.time-card').forEach(c => c.classList.remove('selected'));
+     this.classList.add('selected');
+    });
+   });
+
+   document.getElementById('book-btn').addEventListener('click', function() {
+    let selectedDate = document.querySelector('.date-card.selected').textContent;
+    let selectedTime = document.querySelector('.time-card.selected').textContent;
+    alert(`Booking confirmed for ${selectedDate} at ${selectedTime}`);
+   });
+  </script>
+ </body>
+</html>

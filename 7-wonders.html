@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 Wonders Experience - FUN ZONE</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <style>
+        .section-title { margin-top: 30px; text-align: center; font-size: 2rem; font-weight: bold; }
+        .wonder-img { width: 100%; height: 250px; object-fit: cover; border-radius: 10px; }
+        .buy-ticket-btn { display: block; width: 200px; margin: 30px auto; font-size: 1.2rem; }
+    </style>
+</head>
+<body>
+    
+    <!-- Carousel -->
+    <section class="carousel">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="assets/images/7wonder1.jpg" alt="Scenic View">
+                    <div class="carousel-caption">
+                        <h1>Experience the Extraordinary</h1>
+                        <p>Discover breathtaking sights and unforgettable moments.</p>
+                        <a href="#" class="read-more-btn">Learn More</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/images/7wonder2.jpg" alt="Iconic Landmark">
+                    <div class="carousel-caption">
+                        <h1>A Journey Like No Other</h1>
+                        <p>Explore wonders that inspire and amaze.</p>
+                        <a href="#" class="read-more-btn">Learn More</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/images/7wonder3.jpg" alt="Adventure Destination">
+                    <div class="carousel-caption">
+                        <h1>Unleash Your Sense of Adventure</h1>
+                        <p>Embrace the thrill, the beauty, and the history.</p>
+                        <a href="#" class="read-more-btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+        <div class="overlay">
+            <div class="container d-flex align-items-center justify-content-between position-relative py-2">
+                <!-- Menu Button -->
+                <div class="menu d-flex align-items-center">
+                    <i class="fas fa-bars me-2 text-white" id="menu-button" style="cursor: pointer;"></i>
+                    <span>MENU</span>
+                </div>
+            
+                <!-- Centered Logo -->
+                <div class="logo position-absolute start-50 translate-middle-x">
+                    <a href="index.html"><img alt="logo" src="assets/images/logo.png" style="height: 70px;"></a>
+                </div>
+            </div>
+            
+            <!-- Fullscreen Overlay Menu -->
+            <div class="menu-overlay" id="menu-overlay">
+                <span class="close-btn" id="close-btn">×</span>
+                <a href="experience1.html">EXPERIENCE</a>
+                <a href="leisure.html" class="leisure">LEISURE & DINING</a>
+                <a href="parkCharacters.html">PARKS CHARACTERS</a>
+                <a href="whatsupp.html">WHATS UP</a>
+                <a href="parkInformation.html">PARK INFORMATION</a>
+                <a href="businessOpportunities.html">BUSINESS OPPORTUNITIES</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Experience Section -->
+    <div class="container mt-5">
+        <h2 class="section-title">Explore the 7 Wonders of the World</h2>
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <img src="assets/images/china.jpg" class="wonder-img" alt="The Great Wall of China">
+                <h3>The Great Wall of China</h3>
+                <p>Walk along a detailed replica of this legendary wall with interactive exhibits and stunning views.</p>
+            </div>
+            <div class="col-md-6">
+                <img src="assets/images/petra.jpg" class="wonder-img" alt="Petra, Jordan">
+                <h3>Petra, Jordan</h3>
+                <p>Step into the rock-cut city with its mesmerizing architecture and immersive storytelling experiences.</p>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <img src="assets/images/christ.jpg" class="wonder-img" alt="Christ the Redeemer">
+                <h3>Christ the Redeemer, Brazil</h3>
+                <p>Stand beneath the iconic statue and enjoy breathtaking panoramic views of the park.</p>
+            </div>
+            <div class="col-md-6">
+                <img src="assets/images/machu.jpg" class="wonder-img" alt="Machu Picchu">
+                <h3>Machu Picchu, Peru</h3>
+                <p>Experience the ancient Incan civilization through lush landscapes and engaging virtual tours.</p>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <img src="assets/images/chichen.jpg" class="wonder-img" alt="Chichen Itza">
+                <h3>Chichen Itza, Mexico</h3>
+                <p>Explore the Mayan heritage with a life-like pyramid and cultural performances.</p>
+            </div>
+            <div class="col-md-6">
+                <img src="assets/images/roman.jpg" class="wonder-img" alt="The Roman Colosseum">
+                <h3>The Roman Colosseum, Italy</h3>
+                <p>Witness gladiator reenactments in a grand replica of this ancient Roman arena.</p>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-12 text-center">
+                <img src="assets/images/7wonder2.jpg" class="wonder-img" alt="Taj Mahal">
+                <h3>The Taj Mahal, India</h3>
+                <p>Admire the beauty of this white marble wonder while learning about its historical significance.</p>
+            </div>
+        </div>
+        
+        <!-- Buy Ticket Button -->
+        <div class="text-center">
+            <a href="ticket.html" class="btn btn-primary buy-ticket-btn">Buy Tickets</a>
+        </div>
+    </div>
+    
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

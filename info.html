@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ride Information</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #1f2937, #111827);
+            color: white;
+            font-family: 'Roboto', sans-serif;
+        }
+        .info-card {
+            background-color: #319795;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body class="d-flex align-items-center justify-content-center min-vh-100">
+    <div class="container">
+        <div class="text-center mb-4">
+            <h2 id="rideName">Ride Information</h2>
+        </div>
+        <div class="position-relative text-center">
+            <img id="rideImage" alt="Ride image" class="img-fluid rounded" height="200" style="width: 100%; object-fit: cover;" />
+        </div>
+        <div class="info-card">
+            <div class="small" id="ticketPrice"></div>
+            <div class="small" id="heightRequirement"></div>
+            <div class="small" id="ageRequirement"></div>
+            <div class="small" id="duration"></div>
+            <div class="small" id="safety"></div>
+        </div>
+        <div class="mt-4 text-center">
+            <button class="btn btn-light" onclick="goBack()">Back</button>
+        </div>
+    </div>
+    <script>
+        const rides = [
+            { name: 'Roller Coaster', image: 'assets/images/ride1.jpg', price: 10, height: '48 inches', age: '10+', duration: '2 minutes', safety: 'Secure all loose items.' },
+            { name: 'Ferris Wheel', image: 'assets/images/ride2.jpg', price: 8, height: 'No limit', age: 'All ages', duration: '5 minutes', safety: 'Enjoy the view.' },
+            { name: 'Bumper Cars', image: 'assets/images/ride3.jpg', price: 6, height: '42 inches', age: '8+', duration: '3 minutes', safety: 'Drive safely.' }
+        ];
+
+        function getRideFromURL() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get('ride');
+        }
+
+        function loadRideInfo() {
+            const rideName = getRideFromURL();
+            const ride = rides.find(r => r.name === rideName);
+            if (ride) {
+                document.getElementById('rideName').innerText = ride.name;
+                document.getElementById('rideImage').src = ride.image;
+                document.getElementById('ticketPrice').innerText = `Ticket Price: $${ride.price} per person`;
+                document.getElementById('heightRequirement').innerText = `Height Requirement: ${ride.height}`;
+                document.getElementById('ageRequirement').innerText = `Age Requirement: ${ride.age}`;
+                document.getElementById('duration').innerText = `Duration: ${ride.duration}`;
+                document.getElementById('safety').innerText = `Safety: ${ride.safety}`;
+            } else {
+                document.getElementById('rideName').innerText = 'Ride Not Found';
+            }
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+
+        loadRideInfo();
+    </script>
+</body>
+</html>

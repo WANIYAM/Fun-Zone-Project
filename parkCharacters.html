@@ -1,0 +1,343 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Six Flags Qiddiya City
+  </title>
+ <link rel="stylesheet" href="assets/css/parkCharacters.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="responsive.css">
+  <link rel="stylesheet" href="animation.css">
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  
+/>
+  <style>
+ 
+        .background-image {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .background-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .logo img {
+            height:50px;
+            margin-right: 10px;
+        }
+        #current-country{
+            font-size: 30px;
+        }
+        #current-location{
+            font-size: 20px;
+        }
+        .main-text h1 {
+            font-size: 4em;
+             margin-top: 5px; 
+            margin: 0;
+        }
+        .main-text h2 {
+            font-size: 1.4em;
+            margin: 10px 0;
+            font-weight: bold;
+            animation: changeText 10s infinite;
+        }
+        .scroll-text {
+            margin-bottom: 20px;
+        }
+        .read{
+            font-size: 20px;
+            padding: 8px;
+            border: 2px solid white;
+            border-radius: 10px;
+            color: white;
+            background-color: transparent;
+        }
+        
+        .read:hover{
+            /* background-color: white; */
+            color: black;
+            border: 2px solid black;
+        }
+        
+        .menu-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .menu-overlay a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5em;
+            margin: 20px 0;
+        }
+        .menu-overlay .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2em;
+            cursor: pointer;
+        }
+        /* second section */
+        .section-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+.section-content .text {
+  flex: 1; 
+  padding: 20px;
+  color: black;
+}
+
+.section-content .image {
+  flex: 1; 
+  height: 550px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+        
+  </style>
+ </head>
+ <body>
+  <div class="background-image">
+    <img src="bg.jpeg" alt="">
+   
+   <div class="overlay">
+    <div class="container">
+     <div class="row align-items-center">
+      <div class="col-12 col-md-4 text-left menu">
+       <i class="fas fa-bars" id="menu-button" style="cursor: pointer;">
+       </i>
+       MENU
+       <i class="fas" id="day-night-icon">
+       </i>
+       <span id="current-time">
+       </span>
+       <span class="ml-3" id="current-location">
+       </span>
+      </div>
+      <div class="col-12 col-md-4 text-center my-3 my-md-0 logo">
+       <img alt="logo" src="assets/images/logo.png"/>
+      </div>
+      <div class="col-12 col-md-4 text-md-right text-center">
+        <span id="current-country"></span>
+    </div>
+    
+     </div>
+     <div class="main-text mt-5 mb-auto">
+      <h1>
+      Our park's characters
+      </h1>
+      <h2 id="animated-text">
+        Welcome to fun-zone, where every family member finds their new favorite character!
+         From the youngest adventurer to the most seasoned explorer, our lovable characters are here to make your visit unforgettable.
+          Ready for a day full of fun, laughter, and memories.
+      </h2>
+     </div>
+     <div class="scroll-text" id="scroll-to-next">
+        <a href="park2.html" class="read">Read more</a>
+    </div>
+    </div>
+   </div>
+  </div>
+  <div class="menu-overlay" id="menu-overlay">
+   <span class="close-btn" id="close-btn">
+    ×
+   </span>
+   <a href="#">
+    EXPERIENCE
+   </a>
+   <a href="#">
+    LEISURE & DINNING
+   </a>
+   <a href="#">
+    PARKS CHARACTERS
+   </a>
+   <a href="#">
+    WHATS UP
+   </a>
+   <a href="#">
+    PARK INFORMATION
+   </a>
+   <a href="#">
+    BUSINESS OPPORTUNITIES
+   </a>
+  </div>
+ 
+
+  <section class="layout">
+   
+    <div class="section-content">
+        <div class="text">
+            <h2 style="font-size: 45px;"><b>SOME INFORMATION ABOUT OUR PARK'S CHARACTERS</b></h2>
+            <p style="font-size: 20px;" class="mt-3">Our characters are the heart and soul of Fun-Zone, bringing the magic, excitement, and charm to life! Each one has a unique personality that adds a special touch to your visit, making every moment memorable. Whether it’s a mischievous trickster, a brave adventurer, or a kind-hearted guide, our characters are here to create a fun-filled atmosphere that’s full of surprises. They lead thrilling adventures, share incredible stories, and invite you to be part of their exciting world. These characters engage with visitors, making everyone feel like a part of the park’s extraordinary journey. They help bring every attraction to life, whether through interactions, performances, or themed experiences. With their bright personalities, our characters make sure every visit is filled with joy, laughter, and unforgettable moments. Prepare to meet new friends, discover magical lands, and make memories that will last a lifetime. From fun photos to interactive moments, the characters are here to make your day at Fun-zone extraordinary!
+
+            </div>
+        <img src="cartoons.webp" alt="Character 1" class="image">
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script>
+  
+
+ let index = 0;
+  const animatedText = document.getElementById("animated-text");
+  setInterval(() => {
+      animatedText.textContent = texts[index];
+      index = (index + 1) % texts.length;
+  }, 3000);
+  const menuButton = document.getElementById("menu-button");
+  const menuOverlay = document.getElementById("menu-overlay");
+  const closeButton = document.getElementById("close-btn");
+  menuButton.addEventListener("click", () => {
+      menuOverlay.style.display = "flex";
+  });
+  closeButton.addEventListener("click", () => {
+      menuOverlay.style.display = "none";
+  });
+
+</script>
+
+
+<!-- footer -->
+
+<footer class="footer mt-5">
+    <div class="container">
+      <div class="row">
+        
+        <div class="col-md-3 footer-icons mb-4">
+          <i class="bi bi-facebook"></i>
+          <i class="bi bi-instagram"></i>
+          <i class="bi bi-twitter"></i>
+          <i class="bi bi-tripadvisor"></i>
+        </div>
+  
+       
+        <div class="col-md-3">
+          <h5>News & Offers</h5>
+          <form>
+            <input type="email" class="form-control mb-2" placeholder="Email Address">
+            <button class="btn px-4">Sign Up</button>
+          </form>
+        </div>
+  
+        
+        <div class="col-md-3">
+          <h5>Directions</h5>
+          <p>100 W. Hersheypark Drive, Hershey, PA 17033</p>
+          <button class="btn px-4">Get Directions</button>
+        </div>
+  
+        <!-- Contact -->
+        <div class="col-md-3">
+          <h5>Contact</h5>
+          <p>717-534-3900</p>
+          <button class="btn px-4">Contact Us</button>
+        </div>
+      </div>
+  
+      <div class="row mt-4">
+       
+        <div class="col-md-6">
+          <h5>Important Links</h5>
+          <div class="d-flex flex-wrap">
+            <div class="me-5">
+              <a href="#">Jobs</a><br>
+              <a href="#">Partners</a><br>
+              <a href="#">Gift Cards</a><br>
+              <a href="#">Volunteers</a><br>
+              <a href="#">Media</a><br>
+              <a href="#">Season Pass Portal</a>
+            </div>
+            <div>
+              <a href="#">Privacy Policy</a><br>
+              <a href="#">Social Responsibility</a><br>
+              <a href="#">Conditions</a><br>
+              <a href="#">Company Policies</a><br>
+              <a href="#">Do Not Sell My Personal Info</a><br>
+              <a href="#">Lost & Found</a>
+            </div>
+          </div>
+        </div>
+  
+        
+        <div class="col-md-6 text-end">
+          <i class="bi bi-apple me-3" style="font-size: 24px;"></i>
+          <i class="bi bi-android2" style="font-size: 24px;"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  
+  <div class="email-icon">
+    <i class="bi bi-envelope"></i>
+  </div>
+  
+</body>
+</html>

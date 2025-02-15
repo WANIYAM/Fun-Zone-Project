@@ -1,0 +1,306 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Roboto:wght@300;400;500;900&display=swap");
+/* nav */
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px;
+            height: 15%;
+            z-index: 1000;
+            margin:0;
+            background-color: rgb(26, 9, 30);
+
+        }
+
+        .logo img {
+            height: 10vh;
+            margin-top: 0;
+        }
+
+        .menu-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        .menu-overlay a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5em;
+            margin: 20px 0;
+        }
+
+        .menu-overlay .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2em;
+            cursor: pointer;
+        }
+
+        .overlay-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .menu i {
+            font-size: 1.5em;
+        }
+  
+
+main {
+position: relative;
+width: calc(min(90rem, 90%));
+margin: 0 auto;
+min-height: 100vh;
+column-gap: 3rem;
+padding-block: min(20vh, 3rem);
+/* background-color: rgb(26, 9, 30) */
+z-index: 1;
+}
+
+main > div span {
+text-transform: uppercase;
+letter-spacing: 1.5px;
+font-size: 1rem;
+color: #fff;
+}
+
+main > div h1 {
+text-transform: capitalize;
+letter-spacing: 0.8px;
+font-family: "Roboto", sans-serif;
+font-weight: 900;
+font-size: clamp(3.4375rem, 3.25rem + 0.75vw, 4rem);
+background-color: #005baa;
+background-image: linear-gradient(45deg, #005baa, #ffffff);
+background-size: 100%;
+background-repeat: repeat;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+color: transparent;
+}
+
+main > div hr {
+display: block;
+background: #fff;
+height: 0.25rem;
+width: 6.25rem;
+border: none;
+margin: 1.125rem 0 1.875rem 0;
+}
+
+main > div p {
+line-height: 1.6;
+}
+
+main a {
+display: inline-block;
+text-decoration: none;
+text-transform: uppercase;
+color: #717171;
+font-weight: 500;
+background: #fff;
+border-radius: 3.125rem;
+transition: 0.3s ease-in-out;
+}
+
+main > div > a {
+border: 2px solid #c2c2c2;
+margin-top: 2.188rem;
+padding: 0.625rem 1.875rem;
+}
+
+main > div > a:hover {
+border: 0.125rem solid #005baa;
+color: #005baa;
+}
+
+.swiper {
+width: 100%;
+padding-top: 3.125rem;
+}
+
+.swiper-pagination-bullet,
+.swiper-pagination-bullet-active {
+background: #fff;
+}
+
+.swiper-pagination {
+bottom: 1.25rem !important;
+}
+
+.swiper-slide {
+width: 18.75rem;
+height: 28.125rem;
+display: flex;
+flex-direction: column;
+justify-content: end;
+align-items: self-start;
+background-size: cover;
+background-position: center;
+}
+
+.swiper-slide h2 {
+color: #fff;
+font-family: "Roboto", sans-serif;
+font-weight: 400;
+font-size: 1.4rem;
+line-height: 1.4;
+margin-bottom: 0.625rem;
+padding: 0 0 0 1.563rem;
+text-transform: uppercase;
+}
+
+.swiper-slide p {
+color: #dadada;
+font-family: "Roboto", sans-serif;
+font-weight: 300;
+padding: 0 1.563rem;
+line-height: 1.6;
+font-size: 0.75rem;
+display: -webkit-box; /* Use -webkit-box for compatibility */
+-webkit-box-orient: vertical; /* Set the box orientation */
+overflow: hidden; /* Hide overflow */
+-webkit-line-clamp: 4; /* Limit to 4 lines */
+line-clamp: 4; /* Standard property (not widely supported) */
+}
+
+.swiper-slide a {
+margin: 1.25rem 1.563rem 3.438rem 1.563rem;
+padding: 0.438em 1.875rem;
+font-size: 0.9rem;
+}
+
+.swiper-slide a:hover {
+color:rgb(26, 9, 30);;
+}
+
+@media screen and (min-width: 48rem) {
+main {
+display: flex;
+align-items: center;
+}
+}
+
+@media screen and (min-width: 93.75rem) {
+.swiper {
+width: 85%;
+}
+}
+
+.section-map {
+text-align: center;
+padding: 20px 10px;
+background-color: #4f4f5000;
+border-radius: 10px;
+box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+color: #fff;
+margin-top: 0%;
+
+}
+
+.pin {
+position: absolute;
+width: 20px;
+height: 20px;
+background-color: red;
+border-radius: 50%;
+transform: translate(-50%, -50%);
+cursor: pointer;
+border: 2px solid white;
+}
+.pin-label {
+position: absolute;
+background-color: white;
+padding: 5px;
+border-radius: 5px;
+display: none;
+transform: translate(-50%, -120%);
+white-space: nowrap;
+font-size: 14px;
+font-weight: bold;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+color: black;
+}
+.custom-nav {
+/* background-color: #7ae2f0; */
+padding: 10px;
+display: flex;
+justify-content: center;
+gap: 10px;
+list-style: none;
+margin: 0;
+padding: 0;
+}
+.custom-nav .nav-item {
+flex: 1;
+text-align: center;
+}
+.custom-nav .nav-link {
+display: block;
+padding: 10px 20px;
+/* background-color: #7ae2f0; */
+color: white;
+font-weight: bold;
+/* border: 2px solid white; */
+text-decoration: none;
+}
+.custom-nav .nav-link.active,
+.custom-nav .nav-link:hover {
+background-color: orange;
+color: white;
+}
+/* reviews */
+.testimonial-card {
+    border-radius: 15px;
+    padding: 20px;
+    /* background: white; */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.testimonial-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* footer */
+
+footer{
+    background-color: rgba(43, 6, 51, 0.772);
+}
+.footer-link{
+    color: #fff;
+}
+.footer-link:hover {
+    color: #ffffff;
+}
+.footer-divider {
+    border-color: #4a5568;
+}
+

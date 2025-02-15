@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="assets/css/global.css">
+    <style>
+                @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Roboto:wght@300;400;500;900&display=swap");
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    /* background-color: rgba(0, 0, 0, 0.8); */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.hamburger {
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: right 0.3s ease-in-out;
+    z-index: 1100;
+}
+
+.overlay.active {
+    right: 0;
+}
+
+.overlay a {
+    color: white;
+    font-size: 2rem;
+    text-decoration: none;
+    margin: 20px 0;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+
+main {
+    position: relative;
+    width: calc(min(90rem, 90%));
+    margin: 0 auto;
+    min-height: 100vh;
+    column-gap: 3rem;
+    padding-block: min(20vh, 3rem);
+    /* background-color: rgb(26, 9, 30) */
+    z-index: 1;
+}
+
+main > div span {
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 1rem;
+    color: #fff;
+}
+
+main > div h1 {
+    text-transform: capitalize;
+    letter-spacing: 0.8px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-size: clamp(3.4375rem, 3.25rem + 0.75vw, 4rem);
+    background-color: #005baa;
+    background-image: linear-gradient(45deg, #005baa, #ffffff);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+main > div hr {
+    display: block;
+    background: #fff;
+    height: 0.25rem;
+    width: 6.25rem;
+    border: none;
+    margin: 1.125rem 0 1.875rem 0;
+}
+
+main > div p {
+    line-height: 1.6;
+}
+
+main a {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #717171;
+    font-weight: 500;
+    background: #fff;
+    border-radius: 3.125rem;
+    transition: 0.3s ease-in-out;
+}
+
+main > div > a {
+    border: 2px solid #c2c2c2;
+    margin-top: 2.188rem;
+    padding: 0.625rem 1.875rem;
+}
+
+main > div > a:hover {
+    border: 0.125rem solid #005baa;
+    color: #005baa;
+}
+
+.swiper {
+    width: 100%;
+    padding-top: 3.125rem;
+}
+
+.swiper-pagination-bullet,
+.swiper-pagination-bullet-active {
+    background: #fff;
+}
+
+.swiper-pagination {
+    bottom: 1.25rem !important;
+}
+
+.swiper-slide {
+    width: 18.75rem;
+    height: 28.125rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: self-start;
+    background-size: cover;
+    background-position: center;
+}
+
+.swiper-slide h2 {
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.4;
+    margin-bottom: 0.625rem;
+    padding: 0 0 0 1.563rem;
+    text-transform: uppercase;
+}
+
+.swiper-slide p {
+    color: #dadada;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    padding: 0 1.563rem;
+    line-height: 1.6;
+    font-size: 0.75rem;
+    display: -webkit-box; /* Use -webkit-box for compatibility */
+    -webkit-box-orient: vertical; /* Set the box orientation */
+    overflow: hidden; /* Hide overflow */
+    -webkit-line-clamp: 4; /* Limit to 4 lines */
+    line-clamp: 4; /* Standard property (not widely supported) */
+}
+
+.swiper-slide a {
+    margin: 1.25rem 1.563rem 3.438rem 1.563rem;
+    padding: 0.438em 1.875rem;
+    font-size: 0.9rem;
+}
+
+.swiper-slide a:hover {
+    color:rgb(26, 9, 30);;
+}
+
+@media screen and (min-width: 48rem) {
+    main {
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 93.75rem) {
+    .swiper {
+        width: 85%;
+    }
+}
+
+.section-map {
+text-align: center;
+padding: 20px 10px;
+background-color: #4f4f5000;
+border-radius: 10px;
+box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+color: #fff;
+margin-top: 0%;
+
+}
+
+.pin {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    border: 2px solid white;
+}
+.pin-label {
+    position: absolute;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    display: none;
+    transform: translate(-50%, -120%);
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    color: black;
+}
+.custom-nav {
+    /* background-color: #7ae2f0; */
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.custom-nav .nav-item {
+    flex: 1;
+    text-align: center;
+}
+.custom-nav .nav-link {
+    display: block;
+    padding: 10px 20px;
+    /* background-color: #7ae2f0; */
+    color: white;
+    font-weight: bold;
+    /* border: 2px solid white; */
+    text-decoration: none;
+}
+.custom-nav .nav-link.active,
+.custom-nav .nav-link:hover {
+    background-color: orange;
+    color: white;
+}
+.testimonial-card {
+    border-radius: 15px;
+    padding: 20px;
+    /* background: white; */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.testimonial-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+    </style>
+</head>
+<body>
+     <!-- Map Section -->
+<section class="container section-map" id="map">
+    <h2>Interactive Park Map</h2>
+    
+    <!-- Navigation above the map -->
+    <div class="map-container">
+        <nav class="custom-nav">
+            <ul class="custom-nav" id="map-nav">
+                <!-- Items will be generated dynamically -->
+            </ul>
+        </nav>
+        
+        <!-- Map Image and Pins -->
+        <div class="position-relative">
+            <img alt="Illustration of an amusement park with various rides, shops, and attractions" 
+                class="w-100"  src="assets/images/map-removebg.png"/>
+            <div id="pins-container" class="position-absolute w-100 h-100"></div>
+        </div>
+    </div>
+</section>
+<script>
+    // Define sections with multiple pin locations
+    const sections = [
+        { id: "7wonders", name: "WONDERZONE" },
+        { id: "waterworld", name: "AQUAZONE" },
+        { id: "thrillrides", name: "RIDES" },
+        { id: "wildsafari", name: "SAFARI" },
+        { id: "fantasy", name: "FANTASY" },
+        { id: "shopping", name: "SHOP" },
+        { id: "mascots", name: "MSCOTMANIA" },
+        { id: "food", name: "FLAVOR" },
+    ];
+
+    // Navigation container
+    const navContainer = document.getElementById("map-nav");
+
+    // Generate navigation links dynamically
+    sections.forEach(sec => {
+        const listItem = document.createElement("li");
+        listItem.classList.add("nav-item");
+
+        const link = document.createElement("a");
+        link.href = "#";
+        link.classList.add("nav-link");
+        link.innerText = sec.name;
+        link.onclick = function () {
+            movePins(sec.id, this);
+        };
+
+        listItem.appendChild(link);
+        navContainer.appendChild(listItem);
+    });
+
+    // Define multiple locations per section
+    const locations = {
+        "7wonders": [
+            { top: "-50%", left: "60%", name: "7 Wonders Zone" },
+            { top: "15%", left: "35%", name: "Mini Wonders" },
+            { top: "12%", left: "25%", name: "Historic Wonders" },
+        ],
+        "waterworld": [
+            { top: "-46%", left: "23%", name: "Water Slide" },
+            { top: "-35%", left: "96%", name: "Wave Pool" },
+            { top: "50%", left: "52%", name: "Lazy River" },
+        ],
+        "thrillrides": [
+            { top: "-60%", left: "80%", name: "Roller Coaster" },
+            { top: "-45%", left: "13%", name: "Drop Tower" },
+            { top: "-45%", left: "40%", name: "Spinning Ride" },
+        ],
+        "wildsafari": [
+            { top: "-51%", left: "15%", name: "Lion Habitat" },
+            { top: "10%", left: "8%", name: "Elephant Zone" },
+            { top: "12%", left: "10%", name: "Giraffe Viewing" },
+        ],
+        "fantasy": [
+            { top: "-50%", left: "34%", name: "Fairy Tale Castle" },
+            { top: "28%", left: "42%", name: "Magical Forest" },
+            { top: "30%", left: "38%", name: "Enchanted Carousel" },
+        ],
+        "shopping": [
+            { top: "-30%", left: "44%", name: "Souvenir Shop" },
+            { top: "-30%", left: "64%", name: "Gift Emporium" },
+            { top: "-80%", left: "66%", name: "Clothing Store" },
+        ],
+        "mascots": [
+            { top: "-37%", left: "46%", name: "Mascot Meet & Greet" },
+            { top: "-29%", left: "70%", name: "Parade Route" },
+            { top: "52%", left: "68%", name: "Character Photo Spot" },
+        ],
+        "food": [
+            { top: "-45%", left: "50%", name: "Food Court" },
+            { top: "-45%", left: "67%", name: "Ice Cream Parlor" },
+            { top: "72%", left: "52%", name: "BBQ Grill" },
+        ],
+    };
+
+
+    // Function to move pins on the map
+    function movePins(section, element) {
+        // Remove active class from all links
+        document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+        element.classList.add('active');
+
+        const pinsContainer = document.getElementById("pins-container");
+        pinsContainer.innerHTML = ""; // Clear existing pins
+
+        // Add multiple pins if available
+        if (locations[section]) {
+            locations[section].forEach(loc => {
+                const pin = document.createElement("div");
+                pin.className = "pin";
+                pin.style.top = loc.top;
+                pin.style.left = loc.left;
+                pin.style.position = "absolute";
+
+                const label = document.createElement("div");
+                label.className = "pin-label";
+                label.innerText = loc.name;
+
+                pin.appendChild(label);
+                pin.onclick = () => {
+                    label.style.display = label.style.display === "block" ? "none" : "block";
+                };
+
+                pinsContainer.appendChild(pin);
+            });
+        }
+    }
+</script>
+
+</body>
+</html>

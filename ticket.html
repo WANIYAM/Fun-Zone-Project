@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Tickets - FunZone</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="assets/css/global.css">
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/ticket.css">
+</head>
+<body>
+    <!-- Carousel -->
+    <section class="carousel">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+         
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="assets/images/ticket-main.jpg" alt="">
+                    
+                </div>
+                
+            </div>
+            <div class="overlay">
+                <div class="container d-flex align-items-center justify-content-between position-relative py-2">
+                    <!-- Menu Button -->
+                    <div class="menu d-flex align-items-center text-white">
+                        <i class="fas fa-bars me-2" id="menu-button" style="cursor: pointer;"></i>
+                        <span>MENU</span>
+                    </div>
+                
+                    <!-- Centered Logo -->
+                    
+                            <div class="logo">
+                                <a href="index.html"><img alt="logo" src="assets/images/logo.png" style="height: 70px;"></a>
+                            </div>
+                        
+                    
+                </div>
+                
+                <!-- Fullscreen Overlay Menu -->
+                <div class="menu-overlay" id="menu-overlay">
+                    <span class="close-btn" id="close-btn">
+                        ×
+                       </span>
+                       <a href="experience1.html">
+                        EXPERIENCE
+                       </a>
+                       <a href="leisure.html" class="leisure">
+                        LEISURE & DINNING
+                       </a>
+                       <a href="parkCharacters.html">
+                        PARKS CHARACTERS
+                       </a>
+                       <a href="whatsupp.html">
+                        WHATS UP
+                       </a>
+                       <a href="parkInformation.html">
+                        PARK INFORMATION
+                       </a>
+                       <a href="businessOpportunities.html">
+                        BUSINESS OPPORTUNITIES
+                       </a>
+                      
+                </div>
+    </section>
+
+    <!-- New Section with Image on Left and Text on Right -->
+<div class="container info-section">
+    <div class="row align-items-center">
+        <div class="col-md-6">
+            <img src="assets/images/ticket.jpg" alt="FunZone Attraction">
+        </div>
+        <div class="col-md-6">
+            <h2 style="font-size: 40px;color: white;">Why Visit the Grand Carnival?</h2>
+            <p class="mt-3" style="font-size: 23px;color: white;">Step into a world of dazzling lights, lively music, and endless fun! From classic carnival games to thrilling rides and delicious treats, the Grand Carnival offers an unforgettable experience for all ages.</p>
+            <p class="text-white">Choose from a variety of ticket options, including family passes and VIP access, to enjoy the best of the carnival. Get your tickets now and let the fun begin!</p>
+        </div>
+        
+    </div>
+</div>
+    
+    <div class="container mt-5">
+        <p class="text-center lead text-white">Enjoy thrilling rides, live entertainment, and unforgettable experiences at FunZone. Choose the perfect ticket option for you and your family!</p>
+        
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="ticket-card">
+                    <img src="assets/images/standard.jpg" class="w-30" alt="Standard Ticket">
+                    <div class="p-3 ">
+                        <h5 id="ticket-name">Standard Ticket</h5>
+                        <p>Access to all rides and attractions for a day.</p>
+                        <h6 id="ticket-price">$49.99</h6>
+                        <button class="btn btn-primary" onclick="window.location.href='payment.html?ticket=standard'">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="ticket-card">
+                    <img src="assets/images/vip.jpg" class="w-30" alt="VIP Ticket">
+                    <div class="p-3 ">
+                        <h5>VIP Ticket</h5>
+                        <p>Skip the lines, enjoy priority seating, and get exclusive perks.</p>
+                        <h6>$89.99</h6>
+                        <button class="btn btn-primary" onclick="window.location.href='payment.html?ticket=vip'">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="ticket-card">
+                    <img src="assets/images/image-removebg-preview.png" class="w-30" alt="Family Pack">
+                    <div class="p-3 ">
+                        <h5>Family Pack</h5>
+                        <p>Perfect for families, includes 4 tickets at a discounted price.</p>
+                        <h6>$179.99</h6>
+                        <button class="btn btn-primary" onclick="window.location.href='payment.html?ticket=family'">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+
+<div class="offer-background mt-4">
+    <div class="container-fluid mt-5 text-center">
+        <h3>Limited-Time Offer!</h3>
+        <p class="lead">Get 20% off on all VIP tickets when you buy 4 or more tickets! Hurry, offer ends soon!</p>
+        <button class="btn btn-primary" onclick="alert('you get 20% off')">Claim Offer</button>
+    </div>
+</div>
+
+        <!-- FAQS -->
+        <section class="text-white section-faqs">
+            <div class="container py-4">
+                <div class="text-center">
+                    <h1 class="display-4 font-weight-bold mb-2">Frequently Asked Questions</h1>
+                    <a href="contact.html" class="text-primary">Contact us</a>
+                </div>
+                <div class="row mt-5 ">
+                    <div class="col-md-8">
+                        <div class="list-group faqs-list">
+                            <div class="list-group-item d-flex justify-content-between align-items-center question">
+                                What are the height requirements for the rides?
+                                <i class="fas fa-plus text-primary"></i>
+                            </div>
+                            <div class="answer" style="display: none;">Height requirements vary by ride. Please check the specific ride's information for details.</div>
+        
+                            <div class="list-group-item d-flex justify-content-between align-items-center question">
+                                Are there any age restrictions for certain rides?
+                                <i class="fas fa-plus text-primary"></i>
+                            </div>
+                            <div class="answer" style="display: none;">Yes, some rides have age restrictions for safety reasons.</div>
+        
+                            <div class="list-group-item d-flex justify-content-between align-items-center question">
+                                How can I find out the wait times for rides?
+                                <i class="fas fa-plus text-primary"></i>
+                            </div>
+                            <div class="answer" style="display: none;">You can check the wait times on our mobile app or at the ride entrance.</div>
+        
+                            <div class="list-group-item d-flex justify-content-between align-items-center question">
+                                Are there any rides suitable for young children?
+                                <i class="fas fa-plus text-primary"></i>
+                            </div>
+                            <div class="answer" style="display: none;">Yes, we have several rides designed specifically for young children.</div>
+        
+                            <div class="list-group-item d-flex justify-content-between align-items-center question">
+                                What safety measures are in place for the rides?
+                                <i class="fas fa-plus text-primary"></i>
+                            </div>
+                            <div class="answer" style="display: none;">We have strict safety protocols and regular inspections for all rides.</div>
+        
+                            <div class="list-group-item d-flex justify-content-between align-items-center question">
+                                Can I bring my own food and drinks on the rides?
+                                <i class="fas fa-plus text-primary"></i>
+                            </div>
+                            <div class="answer" style="display: none;">Outside food and drinks are not allowed on the rides for safety and cleanliness reasons.</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mt-5 mt-md-0">
+                        <div class="text-center">
+                            <img src="assets/images/logo.png" alt="Illustration of a person with question marks" class="img-fluid mb-4">
+                            <h2 class="h4 font-weight-bold mb-2">Any Question?</h2>
+                            <p class="text-white mb-4">You can ask anything you want to know about our rides.</p>
+                            <div class="form-group">
+                                <label for="question" class="sr-only">Let me know.</label>
+                                <input type="text" class="form-control" id="question" placeholder="Enter Here">
+                            </div>
+                            <button class="btn btn-primary px-4 py-2">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/data.js"></script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    z-index: 1; /* Ensures text stays on top */
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../images/bgimg.jpg') no-repeat center center/cover;
+    filter: brightness(50%); /* Adjust brightness (lower value = darker) */
+    z-index: -1; /* Places it behind the text */
+}
+
+.hero h1{
+    text-shadow:2px 3px 4px black;
+    
+}
+.hero p{
+    text-shadow:2px 3px 4px black;
+    
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    height: 15%;
+    z-index: 1000;
+    margin:0;
+    background-color: rgb(26, 9, 30);
+
+}
+
+.logo img {
+    height: 10vh;
+    margin-top: 0;
+}
+
+.menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.menu-overlay a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    margin: 20px 0;
+}
+
+.menu-overlay .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.overlay-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.menu i {
+    font-size: 1.5em;
+}
+/* reviews */
+.testimonial-card {
+    border-radius: 15px;
+    padding: 20px;
+    /* background: white; */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.testimonial-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+           /* brands */
+           .logos {
+            overflow: hidden;
+            padding: 30px 0;
+            white-space: nowrap;
+            position: relative;
+          }
+        
+          .logos::before,
+          .logos::after {
+            position: absolute;
+            top: 0;
+            content: '';
+            width: 100px;
+            height: 20%;
+            z-index: 2;
+          }
+        
+          .logos::before {
+            left: 0;
+            /* background: linear-gradient(to left, rgba(255,255,255,0), rgb(255,255,255)); */
+          }
+        
+          .logos::after {
+            right: 0;
+            /* background: linear-gradient(to right, rgba(255,255,255,0), rgb(255,255,255)); */
+          }
+        
+          .logo_items {
+            display: flex;
+            animation: slide 25s linear infinite;
+          }
+        
+          .logos:hover .logo_items {
+            animation-play-state: paused;
+          }
+        
+          .logo_items img {
+            height: 50px;
+            margin: 0 15px;
+          }
+/* footer */
+
+footer{
+    background-color: rgba(43, 6, 51, 0.772);
+}
+.footer-link{
+    color: #fff;
+}
+.footer-link:hover {
+    color: #ffffff;
+}
+.footer-divider {
+    border-color: #4a5568;
+}

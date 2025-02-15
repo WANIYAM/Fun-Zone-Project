@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar with Hamburger Menu</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="assets/css/global.css">
+
+    <style>
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px;
+            height: 15%;
+            z-index: 1000;
+            margin:0;
+            background-color: rgb(26, 9, 30);
+
+        }
+
+        .logo img {
+            height: 10vh;
+            margin-top: 0;
+        }
+
+        .menu-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        .menu-overlay a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5em;
+            margin: 20px 0;
+        }
+
+        .menu-overlay .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2em;
+            cursor: pointer;
+        }
+
+        .overlay-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .menu i {
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="overlay">
+        <div class="container overlay-container py-0">
+            <!-- Logo on the Left -->
+            <div class="logo">
+                <a href="index.html"><img alt="logo" src="assets/images/logo.png"></a>
+            </div>
+
+            <!-- Menu Button on the Right -->
+            <div class="menu">
+                <i class="fas fa-bars ms-0" id="menu-button"></i>
+    
+            </div>
+        </div>
+        
+        <!-- Fullscreen Overlay Menu -->
+        <div class="menu-overlay" id="menu-overlay">
+            <span class="close-btn" id="close-btn">×</span>
+            <a href="experience1.html">EXPERIENCE</a>
+            <a href="leisure.html" class="leisure">LEISURE & DINING</a>
+            <a href="parkCharacters.html">PARK CHARACTERS</a>
+            <a href="whatsupp.html">WHAT'S UP</a>
+            <a href="parkInformation.html">PARK INFORMATION</a>
+            <a href="businessOpportunities.html">BUSINESS OPPORTUNITIES</a>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Menu button functionality
+        const menuButton = document.getElementById("menu-button");
+        const menuOverlay = document.getElementById("menu-overlay");
+        const closeButton = document.getElementById("close-btn");
+
+        menuButton.addEventListener("click", () => {
+            menuOverlay.style.display = "flex";
+        });
+
+        closeButton.addEventListener("click", () => {
+            menuOverlay.style.display = "none";
+        });
+    </script>
+</body>
+</html>

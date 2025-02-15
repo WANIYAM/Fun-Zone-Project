@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Safari Adventure</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <style>
+        /* Hero section styling */
+        header {
+            background-image: url('assets/images/landscape.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0;
+        }
+        
+        /* Custom card styling */
+        .card-img-top {
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        
+        /* Safari rules list styling */
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        ul li {
+            margin: 8px 0;
+        }
+    </style>
+</head>
+<body>
+    <header class="text-center text-white">
+        <div class="hero-content">
+            <h1 class="display-4">Animal Safari Adventure</h1>
+            <p class="lead">Embark on a thrilling journey to discover exotic wildlife in their natural habitats!</p>
+        </div>
+    </header>
+
+    <section class="zone-info container my-5">
+        <h2 class="text-center mb-4">About the Safari</h2>
+        <p>Welcome to the Animal Safari, where you can witness majestic wildlife from around the world. Get ready to encounter lions, giraffes, elephants, and many more in their natural environments. Pack your bags and enjoy the adventure!</p>
+    </section>
+
+    <section class="available-animals container my-5">
+        <h2 class="text-center mb-4">Animals You Can Spot</h2>
+        <div id="animalCards" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 bg-none"></div>
+    </section>
+
+    <section class="safari-rules container my-5">
+        <h2 class="text-center mb-4">Safari Rules</h2>
+        <ul>
+            <li>Stay inside your vehicle at all times for safety!</li>
+            <li>Don't feed the animals – observe them from a distance!</li>
+            <li>Be respectful of the environment and wildlife!</li>
+            <li>Follow the guide's instructions for an optimal experience.</li>
+        </ul>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 Animal Safari Adventure | All Rights Reserved</p>
+    </footer>
+
+    <!-- Bootstrap JS and Popper.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    
+    <script>
+        const animals = [
+            { name: "Lion", rarity: "Rare", description: "King of the Savanna", image: "assets/images/loin.jpg" },
+            { name: "Giraffe", rarity: "Common", description: "Tall and Graceful", image: "assets/images/giraf.webp" },
+            { name: "Elephant", rarity: "Uncommon", description: "Gentle Giants", image: "assets/images/elephant.avif" },
+            { name: "Zebra", rarity: "Very Common", description: "Stripes of the Wild", image: "assets/images/zebra.jpg" },
+            { name: "Cheetah", rarity: "Rare", description: "Fastest Land Animal", image: "assets/images/cheetah.webp" },
+        ];
+
+        const animalContainer = document.getElementById("animalCards");
+
+        animals.forEach(animal => {
+            const card = document.createElement("div");
+            card.classList.add("col");
+            card.innerHTML = `
+                <div class="card border border-white bg-none text-dark">
+                    <img src="${animal.image}" class="card-img-top bg-none" alt="${animal.name}" height="200px" width="300px">
+                    <div class="card-body text-center bg-none">
+                        <p>${animal.name} - ${animal.rarity}, ${animal.description}</p>
+                    </div>
+                </div>
+            `;
+            animalContainer.appendChild(card);
+        });
+    </script>
+</body>
+</html>

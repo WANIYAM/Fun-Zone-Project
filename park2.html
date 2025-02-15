@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aquatic Animals</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/global.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Roboto:wght@300;400;500;900&display=swap");
+
+
+        main {
+            position: relative;
+            width: calc(min(90rem, 90%));
+            margin: 0 auto;
+            min-height: 100vh;
+            column-gap: 3rem;
+            padding-block: min(20vh, 3rem);
+        }
+
+        main > div span {
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 1rem;
+            color: #717171;
+        }
+
+        main > div h1 {
+            text-transform: capitalize;
+            letter-spacing: 0.8px;
+            font-family: "Roboto", sans-serif;
+            font-weight: 900;
+            font-size: clamp(3.4375rem, 3.25rem + 0.75vw, 4rem);
+            /* background-color: #005baa; */
+            background-image: linear-gradient(45deg, #005baa, #000000);
+            background-size: 100%;
+            background-repeat: repeat;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+
+        main > div hr {
+            display: block;
+            /* background: #005baa; */
+            height: 0.25rem;
+            width: 6.25rem;
+            border: none;
+            margin: 1.125rem 0 1.875rem 0;
+        }
+
+        main > div p {
+            line-height: 1.6;
+        }
+
+        main a {
+            display: inline-block;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #717171;
+            font-weight: 500;
+            /* background: #fff; */
+            border-radius: 3.125rem;
+            transition: 0.3s ease-in-out;
+        }
+
+        main > div > a {
+            border: 2px solid #c2c2c2;
+            margin-top: 2.188rem;
+            padding: 0.625rem 1.875rem;
+        }
+
+        main > div > a:hover {
+            border: 0.125rem solid #005baa;
+            color: #005baa;
+        }
+
+        .swiper {
+            width: 100%;
+            padding-top: 3.125rem;
+        }
+
+        .swiper-pagination-bullet,
+        .swiper-pagination-bullet-active {
+            /* background: #fff; */
+            color: #fff;
+        }
+
+        .swiper-pagination {
+            bottom: 1.25rem !important;
+        }
+
+        .swiper-slide {
+            width: 18.75rem;
+            height: 28.125rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            align-items: self-start;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .swiper-slide h2 {
+            color: #fff;
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-size: 1.4rem;
+            line-height: 1.4;
+            margin-bottom: 0.625rem;
+            padding: 0 0 0 1.563rem;
+            text-transform: uppercase;
+        }
+
+        .swiper-slide p {
+            color: #dadada;
+            font-family: "Roboto", sans-serif;
+            font-weight: 300;
+            padding: 0 1.563rem;
+            line-height: 1.6;
+            font-size: 0.75rem;
+            display: -webkit-box; /* Use -webkit-box for compatibility */
+            -webkit-box-orient: vertical; /* Set the box orientation */
+            overflow: hidden; /* Hide overflow */
+            -webkit-line-clamp: 4; /* Limit to 4 lines */
+            line-clamp: 4; /* Standard property (not widely supported) */
+        }
+
+        .swiper-slide a {
+            margin: 1.25rem 1.563rem 3.438rem 1.563rem;
+            padding: 0.438em 1.875rem;
+            font-size: 0.9rem;
+        }
+
+        .swiper-slide a:hover {
+            color: #005baa;
+        }
+
+        @media screen and (min-width: 48rem) {
+            main {
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        @media screen and (min-width: 93.75rem) {
+            .swiper {
+                width: 85%;
+            }
+        }
+
+        .section-map {
+    text-align: center;
+    padding: 40px 20px;
+    /* background-color: #f0f8ff; Light background color */
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+
+}
+
+.story-container {
+            display: flex;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .story-text {
+            padding: 20px;
+            font-size: 20px;
+        }
+        .story-image img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+
+        .story-container2 {
+            display: flex;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .story-text2 {
+            padding: 20px;
+            font-size: 20px;
+        }
+        .story-image2 img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <main>
+        <div>
+            <h1>Our intertaning</h1>
+            <h1>park characters!</h1>
+            <hr>
+          
+        </div>
+        <div class="swiper">
+            <div class="swiper-wrapper" id="swiper-wrapper">
+                <!-- Slides will be generated here -->
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </main>
+    
+   
+        
+       
+</section>
+
+<h1 class="text-white" style="font-size: 5rem;text-align: center;">🄼🄴🄴🅃 🄾🅄🅁 🄰🄼🄰🅉🄸🄽🄶 🄿🄰🅁🄺 🄲🄷🄰🅁🄰🄲🅃🄴🅁🅂</h1>
+
+<div class="container text-white">
+    <div class="row story-container">
+        <!-- Image on the left -->
+        <div class="col-md-6 text-center story-image">
+            <img  data-aos="fade-right" src="food.webp" alt="Benny the Bear">
+        </div>
+
+        <!-- Story on the right -->
+        <div class="col-md-6 story-text">
+            <h2  data-aos="fade-left"style="font-size: 50px;">Benny the Bear – The Foodie King</h2>
+            <p  data-aos="fade-left">
+                Benny has a nose for the best flavors in FunZone! As a cub, he loved baking treats for his forest friends, and now he runs 
+                <strong>Benny’s Feast Fest</strong>, a food court with the most delicious snacks and meals.
+            </p>
+            <p  data-aos="fade-left">
+                Whether it’s his famous honey-drizzled waffles or his giant berry shakes, Benny makes sure every visitor leaves with a full belly and a happy heart. 
+                He believes that the best way to make friends is through great food, and in FunZone, everyone is welcome at Benny’s table!
+            </p>
+        </div>
+    </div>
+</div>
+
+
+<div class="container2 text-white">
+    <div class="row story-container2">
+        <!-- Story on the left -->
+        <div class="col-md-6 story-text2">
+            <h2  data-aos="fade-right" style="font-size: 50px;">Flora the Fairy – Guardian of Greenery</h2>
+            <p  data-aos="fade-right">
+                Flora is a magical fairy who watches over the beautiful gardens and nature in FunZone. With a wave of her wand, she makes flowers bloom instantly and trees whisper in the wind.
+            </p>
+            <p  data-aos="fade-right">
+                She invites visitors to <strong>Flora’s Enchanted Garden</strong>, a relaxing paradise where they can stroll through glowing flowers, listen to singing birds, 
+                and even see magical plants come to life. Her mission is to spread peace and protect nature, making FunZone a truly enchanting place.
+            </p>
+        </div>
+
+        <!-- Image on the right -->
+        <div  data-aos="fade-left" class="col-md-6 text-center story-image2">
+            <img src="girlnature.jpg" alt="Flora the Fairy">
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container text-white">
+    <div class="row mt-sm-5 story-container">
+        <!-- Image on the left -->
+        <div  data-aos="fade-right" class="col-md-6 text-center story-image">
+            <img src="liveshow.jpg" alt="Benny the Bear">
+        </div>
+
+        <!-- Story on the right -->
+        <div class="col-md-6 story-text text-white">
+            <h2  data-aos="fade-left" style="font-size: 50px;">Luna the Star Performer – The Showstopper</h2>
+            <p>
+                Luna is a dazzling white rabbit with a talent for magic and music. She once dreamed of being the biggest star in FunZone, so she practiced every night under the glowing moon. 
+            </p>
+            <p  data-aos="fade-left">
+                and spellbinding tricks, she now headlines the <strong> Starlight Spectacle,</strong> a magical live show filled with music, illusions, and breathtaking performances.
+
+</p>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container2 text-white">
+    <div class="row story-container2">
+        <!-- Story on the left -->
+        <div class="col-md-6 story-text2">
+            <h2  data-aos="fade-right" style="font-size: 50px;">The Legend of Thunder Whirl</h2>
+            <p  data-aos="fade-right">
+                Long ago, a fearless explorer named Captain Gale discovered a hidden blueprint for the ultimate ride—one that could harness the power of wind and lightning. With the help of Zippy the Fox and Robo the Squirrel, he built <strong>Thunder Whirl,</strong> a high-speed roller coaster filled with loops, tunnels, and powerful gusts of wind.</p>
+            <p  data-aos="fade-right">
+                As the ride begins, thunder rumbles, and the higher you climb, the stronger the wind grows. At the peak, lightning flashes, and the ride plunges into a breathtaking spiral of speed! Some say if you listen closely, you can still hear Captain Gale’s voice whispering through the wind, daring you to ride again!
+
+ </p>
+        </div>
+
+        <!-- Image on the right -->
+        <div  data-aos="fade-left" class="col-md-6 text-center story-image2 text-white">
+            <img src="rides.webp" alt="Flora the Fairy">
+        </div>
+    </div>
+</div>
+
+
+<div class="container text-white">
+    <div class="row g-4 story-container">
+        <!-- Image on the left -->
+        <div  data-aos="fade-right" class="col-md-6 text-center story-image">
+            <img src="games.jpeg" alt="Benny the Bear">
+        </div>
+
+        <!-- Story on the right -->
+        <div class="col-md-6 story-text">
+            <h2  data-aos="fade-left" style="font-size: 50px;">Robo the Inventor Squirrel – The Genius Gamer</h2>
+            <p>
+                Robo is a tech-savvy squirrel who loves building fun and futuristic games. With his tiny paws and brilliant mind, he created <strong> Robo’s Arcade World,</strong> a zone filled with interactive games, VR adventures, and robotic challenges. </p>
+            <p  data-aos="fade-left">
+                Whether it’s solving puzzles, battling digital villains, or testing new gadgets, Robo’s creations make FunZone the ultimate playground for gamers of all ages!
+
+            </p>
+        </div>
+    </div>
+</div>
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        // Array of objects containing aquatic animal data
+        const animals = [
+            {
+                name: " Benny the Bear – The Foodie King",
+                description: "",
+                imageUrl: "food.webp",
+                link: "food.webp"
+            },
+            {
+                name: "Flora the Fairy – The Guardian of Greenery",
+                description: "",
+                imageUrl: "girlnature.jpg",
+                link: "girlnature.jpg"
+            },
+            {
+                name: " Luna the Star Performer ",
+                description: "",
+                imageUrl: "liveshow.jpg",
+                link: "live show.jpg"
+            },
+            {
+                name: "The Legend of Thunder Whirl",
+                description: " ",
+                imageUrl: "rides.webp",
+                link: "rides.webp"
+            },
+            {
+                name: " Robo the Inventor Squirrel – The Genius Gamer",
+                description: "",
+                imageUrl: "games.jpeg",
+                link: "food.webp"
+            },
+            // {
+            //     name: "Shopping Zone",
+            //     description: "Explore a variety of souvenir shops, themed merchandise, and exclusive collectibles to take home a piece of the Fun Zone magic!",
+            //     imageUrl: "",
+            //     link: "https://en.wikipedia.org/wiki/Octopus"
+            // },
+            // {
+            //     name: "Mascots & Characters ",
+            //     description: "Meet our fun-loving park mascots who make every visit special with performances and greetings!",
+            //     imageUrl: "assets/images/Mascots-&-Characters.jpg",
+            //     link: "https://en.wikipedia.org/wiki/Shark"
+            // },
+            // {
+            //     name: "Food & Leisure",
+            //     description: " Refuel with delicious meals, refreshing drinks, and international cuisines at our grand food court.",
+            //     imageUrl: "assets/images/Food-&-Leisure.jpg",
+            //     link: "https://en.wikipedia.org/wiki/Dolphin"
+            // }
+        ];
+
+        // Function to generate slides
+        function generateSlides() {
+            const swiperWrapper = document.getElementById('swiper-wrapper');
+            animals.forEach((animal, index) => {
+                const slide = document.createElement('div');
+                slide.className = `swiper-slide`;
+                slide.style.backgroundImage = `url(${animal.imageUrl})`; // Set the background image
+                slide.innerHTML = `
+                    <div>
+                        <h2>${animal.name}</h2>
+                        <p>${animal.description}</p>
+                        <a href="${animal.link}" target="_blank">explore</a>
+                    </div>
+                `;
+                swiperWrapper.appendChild(slide);
+            });
+        }
+
+        // Initialize Swiper
+        function initSwiper() {
+            var swiper = new Swiper(".swiper", {
+                effect: "coverflow",
+                grabCursor: true,
+                centeredSlides: true,
+                coverflowEffect: {
+                    rotate: 0,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 3,
+                    slideShadows: true
+                },
+                keyboard: {
+                    enabled: true
+                },
+                mousewheel: {
+                    thresholdDelta: 70
+                },
+                loop: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true
+                },
+                autoplay: {
+                    delay: 2000,
+                    disableOnInteraction: false
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 2
+                    },
+                    768: {
+                        slidesPerView: 1
+                    },
+                    1024: {
+                        slidesPerView: 2
+                    },
+                    1560: {
+                        slidesPerView: 3
+                    }
+                }
+            });
+        }
+
+        // Call functions
+        generateSlides();
+        initSwiper();
+
+        // map
+
+        const sections = [
+        { id: "7wonders", name: "RIDES" },
+        { id: "waterworld", name: "SHOPS" },
+        { id: "thrillrides", name: "GAMES" },
+        { id: "wildsafari", name: "DINING" },
+        { id: "wildsafari", name: "DINING" },
+        { id: "wildsafari", name: "DINING" },
+        { id: "wildsafari", name: "DINING" },
+        ,
+    ];
+
+    // Get the nav container
+    const navContainer = document.getElementById("map-nav");
+
+    // Generate navigation links dynamically
+    sections.forEach(sec => {
+        const listItem = document.createElement("li");
+        listItem.classList.add("nav-item");
+
+        const link = document.createElement("a");
+        link.href = "#";
+        link.classList.add("nav-link");
+        link.innerText = sec.name;
+        link.onclick = function () {
+            movePins(sec.id, this);
+        };
+
+        listItem.appendChild(link);
+        navContainer.appendChild(listItem);
+    });
+
+    // Function to move pins on the map
+    function movePins(section, element) {
+        document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+        element.classList.add('active');
+
+        const locations = {
+            "7wonders": [{ top: "20%", left: "30%", name: "7 Wonders Zone" }],
+            "waterworld": [{ top: "40%", left: "50%", name: "Water World" }],
+            "thrillrides": [{ top: "35%", left: "60%", name: "Thrill Rides" }],
+            "wildsafari": [{ top: "50%", left: "70%", name: "Wild Safari" }]
+        };
+        
+        const pinsContainer = document.getElementById("pins-container");
+        pinsContainer.innerHTML = "";
+        
+        if (locations[section]) {
+            locations[section].forEach(loc => {
+                const pin = document.createElement("div");
+                pin.className = "pin";
+                pin.style.top = loc.top;
+                pin.style.left = loc.left;
+                pin.style.position = "absolute";
+                
+                const label = document.createElement("div");
+                label.className = "pin-label";
+                label.innerText = loc.name;
+                
+                pin.appendChild(label);
+                pin.onclick = () => {
+                    label.style.display = label.style.display === "block" ? "none" : "block";
+                };
+                
+                pinsContainer.appendChild(pin);
+            });
+        }
+    }
+
+
+</script>
+
+  
+  
+  <div class="email-icon">
+    <i class="bi bi-envelope"></i>
+  </div>
+  
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    AOS.init();
+  </script>
+</body>
+</html>

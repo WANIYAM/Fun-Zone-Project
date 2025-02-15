@@ -1,0 +1,223 @@
+body,html{
+    overflow-x: hidden;
+}
+.background-video {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.background-video video {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: rgba(0, 0, 0, 0.4); */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    /* gap: 5px; */
+}
+.logo img {
+    height: 70px;
+    margin-right: 10px;
+}
+#current-country{
+    font-size: 30px;
+}
+#current-location{
+    font-size: 20px;
+    margin-left:15px;
+}
+#menu-button{
+    margin-left: 10px;
+}
+.main-text h1 {
+    font-size: 2em;
+    margin-top: 15%;
+    margin: 0;
+}
+.main-text h2 {
+    font-size: 3em;
+    margin: 10px 0;
+    font-weight: bold;
+    animation: changeText 10s infinite;
+    margin-top:3%;
+}
+.scroll-text {
+    margin-bottom: 20px;
+
+}
+
+.menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-overlay a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    margin: 20px 0;
+}
+
+.menu-overlay .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+/* second section */
+
+#next-section{
+margin: 0;
+padding: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+width: 100%;
+/* background: #f3f4f6; */
+background-color: rgb(26, 9, 30);
+font-family: Arial, sans-serif;
+color: #fff;
+}
+
+.swiper-container {
+width: 60%;
+/* max-width: 1000px; */
+height: 400px;
+color: #fff;
+}
+
+.swiper-slide {
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+background:inherit;
+color: #fff;
+border-radius: 15px;
+overflow: hidden;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+transition: transform 0.3s ease;
+}
+.swiper-slide:hover {
+transform: scale(1.05); 
+}
+
+.swiper-slide img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.explore-more-container {
+text-align: center;
+margin-top: 20px;
+}
+
+.explore-more-btn {
+background-color: #ff6600;
+color: white;
+padding: 12px 24px;
+font-size: 18px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: 0.3s;
+display: inline-block;
+}
+
+.explore-more-btn:hover {
+background-color: #cc5500;
+}
+
+
+/* Form Section */
+.form-section {
+margin: 0;
+padding: 0;
+width: 100%;
+height: 80vh;
+font-family: 'Roboto', sans-serif;
+background-color: rgb(26, 9, 30);
+color: white;
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+overflow: hidden;
+}
+
+/* Background Video */
+.form-video {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+z-index: 1;
+opacity: 0.3; 
+}
+
+/* Content Overlay */
+.Newsletter {
+text-align: center;
+padding: 20px;
+position: relative;
+z-index: 2; 
+}
+
+.Newsletter h1 {
+font-size: 2em;
+margin-bottom: 10px;
+}
+
+.Newsletter p {
+font-size: 1em;
+margin-bottom: 20px;
+}
+
+.form-control {
+border-radius: 25px 0 0 25px;
+border: 2px solid white;
+background-color: transparent;
+color: white;
+}
+
+.form-control::placeholder {
+color: rgba(255, 255, 255, 0.8);
+}
+
+.btn-light {
+border-radius: 0 25px 25px 0;
+}
+
+
+/* ticket */
+.ticket{
+    background-image: url('assets/images/pexels-scottwebb-136412.jpg');
+      background-size: cover;
+      height: 100vh;
+}
+

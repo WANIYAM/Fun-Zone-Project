@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;family=Sacramento&amp;display=swap" rel="stylesheet"/>
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&amp;family=Roboto:wght@700&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="assets/css/global.css">
+    <title>Water Zone</title>
+    <style>   
+        
+      /* section1 */
+      .section1 {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #8A1C10;
+            background-color: rgb(52, 22, 58);
+            color: #fff;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .feature {
+            width: 30%;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: flex-start;
+        }
+        .feature i {
+            font-size: 50px;
+            color: #fff;
+            margin-right: 20px;
+        }
+        .feature h3 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .feature p {
+            margin: 5px 0 0;
+            color: #fff;
+        }
+        @media (max-width: 768px) {
+            .feature {
+                width: 45%;
+            }
+        }
+        @media (max-width: 480px) {
+            .feature {
+                width: 100%;
+            }
+        }
+
+        /* section 2 */
+        .section2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-family: 'Sacramento', cursive;
+    font-size: 48px;
+    color: #007bff;
+}
+
+.header h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.d-flex.justify-content-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+        
+    </style>
+</head>
+<body>
+     <!-- Carousel -->
+    <section class="carousel">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="assets/images/waterzone1.jpg" alt="">
+                    <div class="carousel-caption">
+                        <p>Come By</p>
+                        <h1>HAVE A GREAT TIME</h1>
+                        <a href="#section-water" class="read-more-btn">Read More</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/images/waterzone2.jpg" alt="">
+                    <div class="carousel-caption">
+                        <p>Great food</p>
+                        <h1>FOR BODY AND SOUL</h1>
+                        <a href="#section-water" class="read-more-btn">Read More</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/images/waterzone3.jpg" alt="">
+                    <div class="carousel-caption">
+                        <p>Unique</p>
+                        <h1>REFRESHMENTS</h1>
+                        <a href="#section-water" class="read-more-btn">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="overlay">
+                <div class="container d-flex align-items-center justify-content-between position-relative py-2">
+                    <!-- Menu Button -->
+                    <div class="menu d-flex align-items-center">
+                        <i class="fas fa-bars me-2" id="menu-button" style="cursor: pointer;"></i>
+                        <span>MENU</span>
+                    </div>
+                
+                    <!-- Centered Logo -->
+                    <div class="logo position-absolute start-50 translate-middle-x">
+                        
+                        <a href="index.html"><img alt="logo" src="assets/images/logo.png" style="height: 70px;"></a>
+                    </div>
+                </div>
+                
+                <!-- Fullscreen Overlay Menu -->
+                <div class="menu-overlay" id="menu-overlay">
+                    <span class="close-btn" id="close-btn">
+                        ×
+                       </span>
+                       <a href="experience1.html">
+                        EXPERIENCE
+                       </a>
+                       <a href="leisure.html" class="leisure">
+                        LEISURE & DINNING
+                       </a>
+                       <a href="parkCharacters.html">
+                        PARKS CHARACTERS
+                       </a>
+                       <a href="whatsupp.html">
+                        WHATS UP
+                       </a>
+                       <a href="parkInformation.html">
+                        PARK INFORMATION
+                       </a>
+                       <a href="businessOpportunities.html">
+                        BUSINESS OPPORTUNITIES
+                       </a>
+                      
+                </div>
+    </section>
+   <!-- SECTION -->
+   <section class="section2" id="section-water">
+    <div class="container card-container">
+        <div class="header text-center">
+            <h1>Experience the</h1>
+            <h2>THRILLING WATER RIDES</h2>
+        </div>
+        <div class="row g-4" id="rides-container">
+            <!-- Water rides will be injected here by JavaScript -->
+        </div>
+        <div class="d-flex justify-content-center mt-4">
+            <a href="rides.html#aqua-ride" class="btn btn-primary">View All Rides</a>
+        </div>
+    </div>
+</section>
+   
+            
+             <!-- Section1 -->
+             <section class="mt-5 section1">
+                <div class="container">
+                    <div class="feature">
+                        <i class="fas fa-water"></i>
+                        <div>
+                            <h3>WAVE POOL</h3>
+                            <p>Experience the thrill of ocean waves in our massive wave pool. Fun for all ages!</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-sliders-h"></i>
+                        <div>
+                            <h3>WATER SLIDES</h3>
+                            <p>Slide into adventure with our exciting, high-speed water slides!</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-child"></i>
+                        <div>
+                            <h3>KIDS SPLASH ZONE</h3>
+                            <p>A fun and safe water play area designed especially for the little ones.</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-swimmer"></i>
+                        <div>
+                            <h3>LAZY RIVER</h3>
+                            <p>Relax and float along the gentle currents of our scenic lazy river.</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-umbrella-beach"></i>
+                        <div>
+                            <h3>RELAXATION ZONE</h3>
+                            <p>Unwind in our shaded cabanas and comfortable lounge areas.</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-tint"></i>
+                        <div>
+                            <h3>WATER SHOWS</h3>
+                            <p>Enjoy spectacular water performances and interactive splash events.</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-fish"></i>
+                        <div>
+                            <h3>UNDERWATER ADVENTURE</h3>
+                            <p>Dive into an immersive water world with themed attractions and surprises.</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>NEW ATTRACTIONS</h3>
+                            <p>Check out the latest additions to our water park for even more excitement!</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-music"></i>
+                        <div>
+                            <h3>POOL PARTY VIBES</h3>
+                            <p>Enjoy live DJs, music, and entertainment by the poolside.</p>
+                        </div>
+                    </div>
+                </div>  
+            </section>
+            
+          
+             
+            
+           <script>
+            const waterRides = [
+    {
+        title: "TSUNAMI WAVE POOL",
+        image: "assets/images/tsunami.png",
+        alt: "Tsunami Wave Pool",
+        description: "Experience the power of the ocean in our Tsunami Wave Pool, where massive waves bring excitement and adventure to all thrill-seekers."
+    },
+    {
+        title: "EXTREME WATER SLIDES",
+        image: "assets/images/waterzone3.jpg",
+        alt: "Extreme Water Slides",
+        description: "Take the plunge on our extreme water slides, featuring high-speed drops, twists, and turns that will leave you breathless and wanting more."
+    },
+    {
+        title: "LAZY RIVER ADVENTURE",
+        image: "assets/images/waterzone1.jpg",
+        alt: "Lazy River Adventure",
+        date: { day: 5, month: "Apr" },
+        description: "Drift along our Lazy River Adventure, where gentle currents guide you through a relaxing and scenic water journey."
+    }
+];
+const ridesContainer = document.getElementById("rides-container");
+
+waterRides.forEach(ride => {
+const rideElement = document.createElement("div");
+rideElement.classList.add("col-md-4");
+
+rideElement.innerHTML = `
+<div class="card news-card position-relative">
+
+<img src="${ride.image}" class="card-img-top" alt="${ride.alt}">
+<div class="card-body news-content">
+    <h3>${ride.title}</h3>
+    <p>${ride.description}</p>
+</div>
+</div>
+`;
+
+ridesContainer.appendChild(rideElement);
+});
+
+           </script>
+
+            <script src="assets/js/script.js"></script>
+            <script src="assets/js/data.js"></script>
+</body>
+</html>

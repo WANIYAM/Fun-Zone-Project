@@ -1,0 +1,49 @@
+
+.footer {
+    background-color: #4b2b2b; 
+    color: #ffffff;
+    padding: 30px 20px;
+  }
+  .footer h5 {
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  .footer a {
+    color: #e8d1c5;
+    text-decoration: none;
+  }
+  .footer a:hover {
+    color: #F5E7CA;
+  }
+  .footer .btn {
+    background-color: #F5E7CA;
+    color: #4b2b2b;
+    font-weight: bold;
+    border-radius: 20px;
+    border: none;
+  }
+  .footer .btn:hover {
+    background-color:#F5E7CA ;
+  }
+  .footer-icons i {
+    font-size: 20px;
+    margin-right: 10px;
+  }
+  .email-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgb(112, 86, 86);
+    color: #fff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .email-icon:hover {
+    background-color:black;
+  }

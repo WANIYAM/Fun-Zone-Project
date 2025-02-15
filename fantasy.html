@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantasy Zone - FUN ZONE</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="assets/css/global.css">
+
+    <style>
+
+        .container {
+            margin-top: 40px;
+        }
+        .section {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            margin: 20px 0;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+        .section:hover {
+            transform: scale(1.05);
+        }
+        .section h2 {
+            color: #ff8c00;
+            font-weight: bold;
+        }
+        .section img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(255, 140, 0, 0.4);
+        }
+        .btn-custom {
+            background-color: #ff8c00;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .btn-custom:hover {
+            background-color: #ff5733;
+        }
+    </style>
+</head>
+<body>
+     <!-- Carousel -->
+     <section class="carousel">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="assets/images/fantasy.jpg" alt="Magical Kingdom">
+                    <div class="carousel-caption">
+                        <p>Enter the Realm</p>
+                        <h1>A WORLD OF MAGIC</h1>
+                        <a href="#" class="read-more-btn">Discover More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="overlay">
+                <div class="container d-flex align-items-center justify-content-between position-relative py-2">
+                    <!-- Menu Button -->
+                    <div class="menu d-flex align-items-center">
+                        <i class="fas fa-bars me-2" id="menu-button" style="cursor: pointer;"></i>
+                        <span>MENU</span>
+                    </div>
+                
+                    <!-- Centered Logo -->
+                    <div class="logo position-absolute start-50 translate-middle-x">
+                        
+                        <a href="index.html"><img alt="logo" src="assets/images/logo.png" style="height: 70px;"></a>
+                    </div>
+                </div>
+                
+                <!-- Fullscreen Overlay Menu -->
+                <div class="menu-overlay" id="menu-overlay">
+                    <span class="close-btn" id="close-btn">
+                        ×
+                       </span>
+                       <a href="experience1.html">
+                        EXPERIENCE
+                       </a>
+                       <a href="leisure.html" class="leisure">
+                        LEISURE & DINNING
+                       </a>
+                       <a href="parkCharacters.html">
+                        PARKS CHARACTERS
+                       </a>
+                       <a href="whatsupp.html">
+                        WHATS UP
+                       </a>
+                       <a href="parkInformation.html">
+                        PARK INFORMATION
+                       </a>
+                       <a href="businessOpportunities.html">
+                        BUSINESS OPPORTUNITIES
+                       </a>
+                      
+                </div>
+    </section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="section">
+                    <h2>Step into a Magical World</h2>
+                    <img src="assets/images/event1.jpg" class="img-fluid" alt="Fantasy Zone">
+                    <p>Enter a realm of enchantment where fairy tales come to life! Explore enchanted castles, meet mythical creatures, and embark on magical adventures.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="section">
+                    <h2>Attractions & Experiences</h2>
+                    <img src="assets/images/magic-castle.jpg" class="img-fluid" alt="Magic Castle">
+                    <p>Visit the grand Magic Castle, home to wizards, fairies, and legendary beings. Witness breathtaking light shows and interactive storytelling sessions.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="section">
+                    <h2>Meet the Fantasy Creatures</h2>
+                    <img src="assets/images/magical-character-pararade.jpg" class="img-fluid" alt="Fantasy Creatures">
+                    <p>Say hello to friendly unicorns, talking trees, and mystical dragons as you wander through the enchanted forest.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="section">
+                    <h2>Magical Rides & Shows</h2>
+                    <img src="assets/images/magiccal-rides.jpg" class="img-fluid" alt="Fantasy Rides">
+                    <p>Experience thrilling rides like the Flying Pegasus, Fairy Flight, and the Mystical Carousel. Don't miss our dazzling Fantasy Parade at sunset!</p>
+                </div>
+            </div>
+        </div>
+            <div class="text-center mt-4">
+            <a href="#" class="btn-custom">Book Your Adventure</a>
+        </div>
+    </div>
+<script src="assets/js/script.js"></script>
+</body>
+</html>

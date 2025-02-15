@@ -1,0 +1,40 @@
+@media (max-width: 768px) {
+    .main-text h1 {
+        font-size: 1.5em;
+    }
+    .main-text h2 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-text h1 {
+        font-size: 1.2em;
+    }
+    .main-text h2 {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 600px) {
+    .Newsletter h1 {
+        font-size: 2em;
+    }
+    .Newsletter p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 768px) {
+    .content h1 {
+        font-size: 2em;
+    }
+
+    .content h2 {
+        font-size: 1.2em;
+    }
+
+    .content p {
+        font-size: 1em;
+    }
+}

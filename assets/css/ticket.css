@@ -1,0 +1,104 @@
+.carousel-item img {
+  background: rgba(0, 0, 0, 0.3);
+}
+  .hero {
+      position: relative;
+      background: url('images/ticket.avif') center/cover no-repeat;
+      height: 350px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      font-size: 2.5rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  }
+  .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+  }
+  .hero h1 {
+      position: relative;
+      z-index: 1;
+  }
+  .ticket-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease-in-out;
+  }
+  .ticket-card:hover {
+      transform: scale(1.05);
+  }
+  .ticket-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+  }
+  .btn-primary {
+      background-color: #feca57;
+      border: none;
+      color: #4b2b2b;
+      font-weight: bold;
+  }
+  .btn-primary:hover {
+      background-color: #f5b23e;
+  }
+  /* Custom section styling */
+  .info-section {
+      padding: 50px 0;
+  }
+  .info-section img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .offer-background {
+position: relative;
+color: white;
+padding: 80px 0;
+text-align: center;
+text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+width: 100%;
+}
+
+.offer-background::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%; /* Full width of the parent element */
+height: 100%; /* Full height of the parent element */
+background: url('images/bg3.jpg') center/cover no-repeat;
+filter: brightness(0.5); /* Adjust brightness */
+z-index: -1; /* Ensure the background stays behind the text */
+}
+
+.logo {
+position: absolute;
+top: 10px;
+left: 50%;
+transform: translateX(-50%);
+}
+
+.section-faqs{
+color: black;
+}
+.section-faqs {
+      background-color: rgb(26, 9, 30);
+  }
+
+  .faqs-list {
+      background-color: rgb(26, 9, 30);
+  }
+
+
+
