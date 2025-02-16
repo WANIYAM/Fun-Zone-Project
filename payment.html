@@ -10,21 +10,32 @@
         body {
             background: black url('assets/images/cont.jpg') no-repeat center center/cover;
             color: white;
+            height: auto;
         }
+        
+       
         .card {
-            background: rgba(0, 0, 0, 0.5);
-            color: white;
-            border-radius: 10px;
-        }
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border-radius: 12px;
+    max-width: 380px; /* Moderate width */
+    height: auto; /* Dynamic height */
+    padding: 25px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px); /* Soft blur effect */
+}
+
+
         input, button {
             color: black;
         }
     </style>
 </head>
 <body onload="getTicketDetails()">
+    
     <section>
-        <div class="container d-flex justify-content-center align-items-center min-vh-100">
-            <div class="card p-4 shadow w-100" style="max-width: 400px; height: 100vh;">
+        <div class="container d-flex justify-content-center align-items-center ">
+            <div class="card p-4 shadow w-100 mt-5 mb-5 h-50">
                 <h2 class="text-center">Checkout</h2>
                 <p><strong>Ticket:</strong> <span id="ticket-name"></span></p>
                 <p><strong>Price:</strong> <span id="ticket-price"></span></p>
@@ -57,9 +68,12 @@
                     </div>
                     
                     <button type="submit" class="btn btn-success w-100">Complete Payment</button>
+                    <button type="button" class="btn btn-secondary w-100 mt-2" onclick="goBack()">Back</button>
+
                 </form>
             </div>
         </div>
+
     </section>
     
     <script>
@@ -78,6 +92,9 @@
                 alert("Please fill in all the required fields.");
             }
         });
+        function goBack() {
+        window.history.back();
+    }
     </script>
     
     <script src="assets/js/bootstrap.bundle.min.js"></script>

@@ -236,7 +236,6 @@ function displayRides(rideList) {
                 <img src="assets/images/${ride.image}" class="card-img-top " alt="${ride.name}">
                 <div class="ride-overlay flex d-flex flex-direction-row gap-3">
                     <div class="ride-title">${ride.name}</div> <!-- Title is now in the overlay -->
-                    <button class="btn btn-warning mt-2" onclick="buyTicket(); event.stopPropagation();">Buy Ticket</button>
                 </div>
             </div>
         `;
@@ -256,7 +255,7 @@ function goToRideDetail(id) {
 
 function buyTicket(rideId) {
     
-    window.location.href = `tiCKET.html?rideId=${rideId}`;
+    window.location.href = `ridesDetail?rideId=${rideId}`;
 }
 
 // Load all rides initially

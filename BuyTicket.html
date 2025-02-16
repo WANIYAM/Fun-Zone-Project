@@ -3,31 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment Page</title>
+    <title>Buy Ticket</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/global.css">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <style>
         body {
-            background: black url('assets/images/cont.jpg') no-repeat center center/cover;
-            color: white;
+            /* background-color: #f8f9fa; */
+            position: relative;
+                background: rgba(0, 0, 0, 0.6);
+                height: auto;
+
+            
         }
-        .card {
-            background: rgba(0, 0, 0, 0.5);
-            color: white;
+        #backgroundImage {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Place it behind other content */
+            background-size: cover;
+            background-position: center;
+            /* opacity: 0.5; Adjust opacity for better text visibility */
+        }
+        .form-container {
+            background: rgba(0, 0, 0, 0.6);
+
+            padding: 20px;
             border-radius: 10px;
-        }
-        input, button {
-            color: black;
         }
     </style>
 </head>
-<body onload="buyTicket()">
+<body onload="getTicketDetails()">
+    <div id="backgroundImage" class="background-image"></div>
     <section>
-        <div class="container d-flex justify-content-center align-items-center min-vh-100">
-            <div class="card p-4 shadow w-100" style="max-width: 400px; height: 100vh;">
+        <div class="container d-flex justify-content-center align-items-center ">
+            <div class="card p-4 shadow w-50 mt-5 mb-5 h-30">
                 <h2 class="text-center">Checkout</h2>
-                <p><strong>Ticket:</strong> <span id="ticket-name"></span></p>
-                <p><strong>Price:</strong> <span id="ticket-price"></span></p>
+                <p><strong>Ticket:</strong> <span id="rideName"></span></p>
+                <p><strong>Price:</strong> <span id="ticketPrice"></span></p>
                 
                 <form id="paymentForm" method="POST">
                     <div class="mb-3">
@@ -57,12 +71,30 @@
                     </div>
                     
                     <button type="submit" class="btn btn-success w-100">Complete Payment</button>
+                    <button type="button" class="btn btn-secondary w-100 mt-2" onclick="goBack()">Back</button>
                 </form>
             </div>
         </div>
     </section>
     
     <script>
+        function getTicketDetails() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const rideName = urlParams.get("name");
+            const ticketPrice = urlParams.get("price");
+            const rideImage = urlParams.get("image"); // Get the image name
+
+            document.getElementById("rideName").textContent = rideName ? rideName : "Ride not found";
+            document.getElementById("ticketPrice").textContent = ticketPrice ? `$${ticketPrice}` : "Price not available";
+
+            // Set the background image
+            if (rideImage) {
+                document.getElementById("backgroundImage").style.backgroundImage = `url('assets/images/${rideImage}')`;
+            } else {
+                console.log("No ride image found.");
+            }
+        }
+
         document.getElementById("paymentForm").addEventListener("submit", function(event) {
             event.preventDefault(); // Prevent form submission
             
@@ -78,9 +110,12 @@
                 alert("Please fill in all the required fields.");
             }
         });
+
+        function goBack() {
+            window.history.back();
+        }
     </script>
     
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
