@@ -4,19 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aquatic Animals</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/global.css">
-
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/experience.css">
+    <link rel="stylesheet" href="assets/css/experience.css">
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Roboto:wght@300;400;500;900&display=swap");
 
@@ -123,10 +116,12 @@
             margin-bottom: 0.625rem;
             padding: 0 0 0 1.563rem;
             text-transform: uppercase;
+            text-shadow: 2px 4px 5px black;
         }
 
         .swiper-slide p {
-            color: #dadada;
+            color: #000000;
+            text-shadow:2px 4px 5p black;
             font-family: "Roboto", sans-serif;
             font-weight: 300;
             padding: 0 1.563rem;
@@ -204,33 +199,56 @@
     </style>
 </head>
 <body>
+    <div class="overlay">
+        <div class="container overlay-container py-0">
+            <!-- Logo on the Left -->
+            <div class="logo">
+                <a href="index.html"><img alt="logo" src="assets/images/logo.png"></a>
+            </div>
+
+            <!-- Menu Button on the Right -->
+            <div class="menu">
+                <i class="fas fa-bars ms-0" id="menu-button"></i>
+    
+            </div>
+        </div>
+        
+        <!-- Fullscreen Overlay Menu -->
+        <div class="menu-overlay" id="menu-overlay">
+            <span class="close-btn" id="close-btn">×</span>
+            <a href="experience1.html">EXPERIENCE</a>
+            <a href="leisure.html" class="leisure">LEISURE & DINING</a>
+            <a href="parkCharacters.html">PARK CHARACTERS</a>
+            <a href="whatsupp.html">WHAT'S UP</a>
+            <a href="parkInformation.html">PARK INFORMATION</a>
+            <a href="businessOpportunities.html">BUSINESS OPPORTUNITIES</a>
+            <a href="contact.html">CONTACT US</a>
+        </div>
+    </div>
+
     <main>
         <div>
-            <h1>Our intertaning</h1>
-            <h1>park characters!</h1>
+            <h1 class="mt-5">Our</h1>
+            <h1>Park Characters</h1>
             <hr>
-          
+            <p>Embark on an Unforgettable Adventure at FUN ZONE!</p>
+            <a href="#section">View park characters</a>
         </div>
-        <div class="swiper">
+        <div class="swiper mt-5">
             <div class="swiper-wrapper" id="swiper-wrapper">
                 <!-- Slides will be generated here -->
             </div>
             <div class="swiper-pagination"></div>
         </div>
     </main>
-    
-   
-        
-       
-</section>
 
 <h1 class="text-white" style="font-size: 5rem;text-align: center;">🄼🄴🄴🅃 🄾🅄🅁 🄰🄼🄰🅉🄸🄽🄶 🄿🄰🅁🄺 🄲🄷🄰🅁🄰🄲🅃🄴🅁🅂</h1>
 
-<div class="container text-white">
+<div class="container text-white " id="section">
     <div class="row story-container">
         <!-- Image on the left -->
         <div class="col-md-6 text-center story-image">
-            <img  data-aos="fade-right" src="food.webp" alt="Benny the Bear">
+            <img  data-aos="fade-right" src="assets/images/food.webp" alt="Benny the Bear">
         </div>
 
         <!-- Story on the right -->
@@ -249,7 +267,7 @@
 </div>
 
 
-<div class="container2 text-white">
+<div class="container text-white">
     <div class="row story-container2">
         <!-- Story on the left -->
         <div class="col-md-6 story-text2">
@@ -265,7 +283,7 @@
 
         <!-- Image on the right -->
         <div  data-aos="fade-left" class="col-md-6 text-center story-image2">
-            <img src="girlnature.jpg" alt="Flora the Fairy">
+            <img src="assets/images/girlnature.jpg" alt="Flora the Fairy">
         </div>
     </div>
 </div>
@@ -276,7 +294,7 @@
     <div class="row mt-sm-5 story-container">
         <!-- Image on the left -->
         <div  data-aos="fade-right" class="col-md-6 text-center story-image">
-            <img src="liveshow.jpg" alt="Benny the Bear">
+            <img src="assets/images/liveshow.jpg" alt="Benny the Bear">
         </div>
 
         <!-- Story on the right -->
@@ -295,7 +313,7 @@
 
 
 
-<div class="container2 text-white">
+<div class="container text-white">
     <div class="row story-container2">
         <!-- Story on the left -->
         <div class="col-md-6 story-text2">
@@ -310,17 +328,17 @@
 
         <!-- Image on the right -->
         <div  data-aos="fade-left" class="col-md-6 text-center story-image2 text-white">
-            <img src="rides.webp" alt="Flora the Fairy">
+            <img src="assets/images/rides.webp" alt="Flora the Fairy">
         </div>
     </div>
 </div>
 
 
-<div class="container text-white">
+<div class="container mb-5 text-white">
     <div class="row g-4 story-container">
         <!-- Image on the left -->
         <div  data-aos="fade-right" class="col-md-6 text-center story-image">
-            <img src="games.jpeg" alt="Benny the Bear">
+            <img src="assets/images/games.jpeg" alt="Benny the Bear">
         </div>
 
         <!-- Story on the right -->
@@ -335,10 +353,60 @@
         </div>
     </div>
 </div>
+<footer class="text-light py-5 ">
+    <div class="container">
+        <div class="row">
+            <!-- About Section -->
+            <div class="col-md-3 mb-4">
+                <h5 class="fw-bold text-warning">About Fun Zone</h5>
+                <p class="small">
+                    Experience world-class rides, attractions, and entertainment at Fun Zone, the ultimate destination for thrill-seekers!
+                </p>
+            </div>
 
+            <!-- Quick Links -->
+            <div class="col-md-3 mb-4">
+                <h5 class="fw-bold text-warning">Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="index.html" class="text-light text-decoration-none">Home</a></li>
+                    <li><a href="about.html" class="text-light text-decoration-none">About</a></li>
+                    <li><a href="ticket.html" class="text-light text-decoration-none">Tickets</a></li>
+                    <li><a href="contact.html" class="text-light text-decoration-none">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="col-md-3 mb-4">
+                <h5 class="fw-bold text-warning">Contact Us</h5>
+                <p class="small mb-1"><i class="fas fa-map-marker-alt text-warning"></i> 123 Fun Zone Avenue, Theme Park City</p>
+                <p class="small mb-1"><i class="fas fa-envelope text-warning"></i> <a href="mailto:info@funzone.com" class="text-light text-decoration-none">info@funzone.com</a></p>
+                <p class="small"><i class="fas fa-phone text-warning"></i> +1 (234) 567-8900</p>
+            </div>
+
+            <!-- Social Media -->
+            <div class="col-md-3 mb-4 text-md-end text-center">
+                <h5 class="fw-bold text-warning">Follow Us</h5>
+                <div class="mt-2">
+                    <a href="www.facebook.com" class="text-light me-3"><i class="fab fa-facebook-f fa-lg"></i></a>
+                    <a href="www.twitter.com" class="text-light me-3"><i class="fab fa-twitter fa-lg"></i></a>
+                    <a href="www.instagram.com" class="text-light"><i class="fab fa-instagram fa-lg"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <hr class="border-light my-4">
+
+        <!-- Copyright -->
+        <div class="text-center small">
+            &copy; 2025 Fun Zone, Inc. | All Rights Reserved.
+        </div>
+    </div>
+</footer>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
+
+
         // Array of objects containing aquatic animal data
         const animals = [
             {
@@ -371,24 +439,7 @@
                 imageUrl: "games.jpeg",
                 link: "food.webp"
             },
-            // {
-            //     name: "Shopping Zone",
-            //     description: "Explore a variety of souvenir shops, themed merchandise, and exclusive collectibles to take home a piece of the Fun Zone magic!",
-            //     imageUrl: "",
-            //     link: "https://en.wikipedia.org/wiki/Octopus"
-            // },
-            // {
-            //     name: "Mascots & Characters ",
-            //     description: "Meet our fun-loving park mascots who make every visit special with performances and greetings!",
-            //     imageUrl: "assets/images/Mascots-&-Characters.jpg",
-            //     link: "https://en.wikipedia.org/wiki/Shark"
-            // },
-            // {
-            //     name: "Food & Leisure",
-            //     description: " Refuel with delicious meals, refreshing drinks, and international cuisines at our grand food court.",
-            //     imageUrl: "assets/images/Food-&-Leisure.jpg",
-            //     link: "https://en.wikipedia.org/wiki/Dolphin"
-            // }
+            
         ];
 
         // Function to generate slides
@@ -397,11 +448,11 @@
             animals.forEach((animal, index) => {
                 const slide = document.createElement('div');
                 slide.className = `swiper-slide`;
-                slide.style.backgroundImage = `url(${animal.imageUrl})`; // Set the background image
+                slide.style.backgroundImage = `url(assets/images/${animal.imageUrl})`; // Set the background image
                 slide.innerHTML = `
                     <div>
                         <h2>${animal.name}</h2>
-                        <p>${animal.description}</p>
+                        <p class="text-black">${animal.description}</p>
                         <a href="${animal.link}" target="_blank">explore</a>
                     </div>
                 `;
@@ -458,76 +509,6 @@
         generateSlides();
         initSwiper();
 
-        // map
-
-        const sections = [
-        { id: "7wonders", name: "RIDES" },
-        { id: "waterworld", name: "SHOPS" },
-        { id: "thrillrides", name: "GAMES" },
-        { id: "wildsafari", name: "DINING" },
-        { id: "wildsafari", name: "DINING" },
-        { id: "wildsafari", name: "DINING" },
-        { id: "wildsafari", name: "DINING" },
-        ,
-    ];
-
-    // Get the nav container
-    const navContainer = document.getElementById("map-nav");
-
-    // Generate navigation links dynamically
-    sections.forEach(sec => {
-        const listItem = document.createElement("li");
-        listItem.classList.add("nav-item");
-
-        const link = document.createElement("a");
-        link.href = "#";
-        link.classList.add("nav-link");
-        link.innerText = sec.name;
-        link.onclick = function () {
-            movePins(sec.id, this);
-        };
-
-        listItem.appendChild(link);
-        navContainer.appendChild(listItem);
-    });
-
-    // Function to move pins on the map
-    function movePins(section, element) {
-        document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
-        element.classList.add('active');
-
-        const locations = {
-            "7wonders": [{ top: "20%", left: "30%", name: "7 Wonders Zone" }],
-            "waterworld": [{ top: "40%", left: "50%", name: "Water World" }],
-            "thrillrides": [{ top: "35%", left: "60%", name: "Thrill Rides" }],
-            "wildsafari": [{ top: "50%", left: "70%", name: "Wild Safari" }]
-        };
-        
-        const pinsContainer = document.getElementById("pins-container");
-        pinsContainer.innerHTML = "";
-        
-        if (locations[section]) {
-            locations[section].forEach(loc => {
-                const pin = document.createElement("div");
-                pin.className = "pin";
-                pin.style.top = loc.top;
-                pin.style.left = loc.left;
-                pin.style.position = "absolute";
-                
-                const label = document.createElement("div");
-                label.className = "pin-label";
-                label.innerText = loc.name;
-                
-                pin.appendChild(label);
-                pin.onclick = () => {
-                    label.style.display = label.style.display === "block" ? "none" : "block";
-                };
-                
-                pinsContainer.appendChild(pin);
-            });
-        }
-    }
-
 
 </script>
 
@@ -537,10 +518,11 @@
     <i class="bi bi-envelope"></i>
   </div>
   
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
     AOS.init();
   </script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
