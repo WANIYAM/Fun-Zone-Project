@@ -83,7 +83,7 @@ const experience = [
         name: "Wild Safari Zone",
         description: "Embark on an exciting journey through the wild, featuring exotic animals, thrilling jungle rides, and an immersive safari experience!",
         imageUrl: "assets/images/Wild-Safari-Zone.jpg",
-        link: "wild-safari.html"
+        link: "safari.html"
     },
     {
         name: "Fantasy Kingdom Zone",

@@ -4,142 +4,144 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fantasy Zone - FUN ZONE</title>
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;family=Sacramento&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&amp;family=Roboto:wght@700&amp;display=swap"
+        rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/fantasy.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/animation.css">
+    <script src="assets/js/data.js"></script>
 
-    <style>
-
-        .container {
-            margin-top: 40px;
-        }
-        .section {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 30px;
-            margin: 20px 0;
-            border-radius: 12px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            text-align: center;
-            transition: transform 0.3s ease-in-out;
-        }
-        .section:hover {
-            transform: scale(1.05);
-        }
-        .section h2 {
-            color: #ff8c00;
-            font-weight: bold;
-        }
-        .section img {
-            width: 100%;
-            max-width: 600px;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(255, 140, 0, 0.4);
-        }
-        .btn-custom {
-            background-color: #ff8c00;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background 0.3s;
-        }
-        .btn-custom:hover {
-            background-color: #ff5733;
-        }
-    </style>
 </head>
 <body>
-     <!-- Carousel -->
-     <section class="carousel">
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-            
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="assets/images/fantasy.jpg" alt="Magical Kingdom">
-                    <div class="carousel-caption">
-                        <p>Enter the Realm</p>
-                        <h1>A WORLD OF MAGIC</h1>
-                        <a href="#" class="read-more-btn">Discover More</a>
-                    </div>
-                </div>
+
+     <!-- Navbar -->
+
+     <div class="overlay">
+        <div class="container overlay-container py-0">
+            <!-- Logo on the Left -->
+            <div class="logo">
+                <a href="index.html"><img alt="logo" src="assets/images/logo.png"></a>
             </div>
-            <div class="overlay">
-                <div class="container d-flex align-items-center justify-content-between position-relative py-2">
-                    <!-- Menu Button -->
-                    <div class="menu d-flex align-items-center">
-                        <i class="fas fa-bars me-2" id="menu-button" style="cursor: pointer;"></i>
-                        <span>MENU</span>
-                    </div>
-                
-                    <!-- Centered Logo -->
-                    <div class="logo position-absolute start-50 translate-middle-x">
-                        
-                        <a href="index.html"><img alt="logo" src="assets/images/logo.png" style="height: 70px;"></a>
-                    </div>
-                </div>
-                
-                <!-- Fullscreen Overlay Menu -->
-                <div class="menu-overlay" id="menu-overlay">
-                    <span class="close-btn" id="close-btn">
-                        ×
-                       </span>
-                       <a href="experience1.html">
-                        EXPERIENCE
-                       </a>
-                       <a href="leisure.html" class="leisure">
-                        LEISURE & DINNING
-                       </a>
-                       <a href="parkCharacters.html">
-                        PARKS CHARACTERS
-                       </a>
-                       <a href="whatsupp.html">
-                        WHATS UP
-                       </a>
-                       <a href="parkInformation.html">
-                        PARK INFORMATION
-                       </a>
-                       <a href="businessOpportunities.html">
-                        BUSINESS OPPORTUNITIES
-                       </a>
-                      
-                </div>
-    </section>
+
+            <!-- Menu Button on the Right -->
+            <div class="menu text-white">
+                <i class="fas fa-bars ms-0" id="menu-button"></i>
+    
+            </div>
+        </div>
+        
+        <!-- Fullscreen Overlay Menu -->
+        <div class="menu-overlay" id="menu-overlay">
+            <span class="close-btn text-white" id="close-btn">×</span>
+            <a href="experience1.html">EXPERIENCE</a>
+            <a href="leisure.html" class="leisure">LEISURE & DINING</a>
+            <a href="parkCharacters.html">PARK CHARACTERS</a>
+            <a href="whatsupp.html">WHAT'S UP?</a>
+            <a href="parkInformation.html">PARK INFORMATION</a>
+            <a href="businessOpportunities.html">BUSINESS OPPORTUNITIES</a>
+            <a href="contact.html">CONTACT US</a>
+        </div>
+    </div>
+
+
+  
+
+    <header class="hero fade-in">
+        <div class="container">
+            <h1 class="text-white mt-5 mb-3 fw-bolder">Enter the Realm</h1>
+        <p class="mb-5 text-white fw-bolder">A WORLD OF MAGIC</p>
+        </div>
+    </header>
+    
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
-                <div class="section">
+            <div class="col-md-6 mb-5 text-white">
+                <div class="section h-100 ">
                     <h2>Step into a Magical World</h2>
-                    <img src="assets/images/event1.jpg" class="img-fluid" alt="Fantasy Zone">
+                    <img src="assets/images/event1.jpg" class="img-fluid mb-5" alt="Fantasy Zone">
                     <p>Enter a realm of enchantment where fairy tales come to life! Explore enchanted castles, meet mythical creatures, and embark on magical adventures.</p>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="section">
+            <div class="col-md-6 mb-5 text-white">
+                <div class="section h-100 ">
                     <h2>Attractions & Experiences</h2>
-                    <img src="assets/images/magic-castle.jpg" class="img-fluid" alt="Magic Castle">
+                    <img src="assets/images/magic-castle.jpg" class="img-fluid mb-5" alt="Magic Castle">
                     <p>Visit the grand Magic Castle, home to wizards, fairies, and legendary beings. Witness breathtaking light shows and interactive storytelling sessions.</p>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="section">
+            <div class="col-md-6 mb-5 text-white">
+                <div class="section h-100 ">
                     <h2>Meet the Fantasy Creatures</h2>
-                    <img src="assets/images/magical-character-pararade.jpg" class="img-fluid" alt="Fantasy Creatures">
+                    <img src="assets/images/magical-character-pararade.jpg" class="img-fluid mb-5" alt="Fantasy Creatures">
                     <p>Say hello to friendly unicorns, talking trees, and mystical dragons as you wander through the enchanted forest.</p>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="section">
+            <div class="col-md-6 mb-5 text-white">
+                <div class="section h-100 ">
                     <h2>Magical Rides & Shows</h2>
-                    <img src="assets/images/magiccal-rides.jpg" class="img-fluid" alt="Fantasy Rides">
+                    <img src="assets/images/magiccal-rides.jpg" class="img-fluid mb-5" alt="Fantasy Rides">
                     <p>Experience thrilling rides like the Flying Pegasus, Fairy Flight, and the Mystical Carousel. Don't miss our dazzling Fantasy Parade at sunset!</p>
                 </div>
             </div>
         </div>
             <div class="text-center mt-4">
-            <a href="#" class="btn-custom">Book Your Adventure</a>
+            <a href="ticket.html" class="btn-custom mb-5">Book Your Adventure</a>
         </div>
     </div>
-<script src="assets/js/script.js"></script>
+    <footer class="text-light py-5 mt-5 ">
+        <div class="container">
+            <div class="row">
+                <!-- About Section -->
+                <div class="col-md-3 mb-4">
+                    <h5 class="fw-bold text-warning">About Fun Zone</h5>
+                    <p class="small">
+                        Experience world-class rides, attractions, and entertainment at Fun Zone, the ultimate destination for thrill-seekers!
+                    </p>
+                </div>
+    
+                <!-- Quick Links -->
+                <div class="col-md-3 mb-4">
+                    <h5 class="fw-bold text-warning">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-light text-decoration-none">Home</a></li>
+                        <li><a href="about.html" class="text-light text-decoration-none">About</a></li>
+                        <li><a href="ticket.html" class="text-light text-decoration-none">Tickets</a></li>
+                        <li><a href="contact.html" class="text-light text-decoration-none">Contact Us</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Contact Info -->
+                <div class="col-md-3 mb-4">
+                    <h5 class="fw-bold text-warning">Contact Us</h5>
+                    <p class="small mb-1"><i class="fas fa-map-marker-alt text-warning"></i> 123 Fun Zone Avenue, Theme Park City</p>
+                    <p class="small mb-1"><i class="fas fa-envelope text-warning"></i> <a href="mailto:info@funzone.com" class="text-light text-decoration-none">info@funzone.com</a></p>
+                    <p class="small"><i class="fas fa-phone text-warning"></i> +1 (234) 567-8900</p>
+                </div>
+    
+                <!-- Social Media -->
+                <div class="col-md-3 mb-4 text-md-end text-center">
+                    <h5 class="fw-bold text-warning">Follow Us</h5>
+                    <div class="mt-2">
+                        <a href="www.facebook.com" class="text-light me-3"><i class="fab fa-facebook-f fa-lg"></i></a>
+                        <a href="www.twitter.com" class="text-light me-3"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="www.instagram.com" class="text-light"><i class="fab fa-instagram fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+    
+            <hr class="border-light my-4">
+    
+            <!-- Copyright -->
+            <div class="text-center small">
+                &copy; 2025 Fun Zone, Inc. | All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
