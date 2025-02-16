@@ -1,0 +1,98 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Details</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+</head>
+<body>
+    <div class="container py-5">
+        <div id="restaurant-details" class="text-center"></div>
+        <div id="menu" class="row row-cols-1 row-cols-md-2 g-4 mb-5"></div>
+        <a href="leisure.html" class="btn btn-warning mt-3" style="font-size: 20px; padding: 10px 20px;">Back To Restaurant</a>
+
+    </div>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const restaurants = [
+    {
+        name: "Gourmet Delights",
+        description: "Enjoy a fine dining experience with world-class chefs and exotic cuisines.",
+        menu: [
+            { item: "Pear Salad", price: "$11", description: "Reid's Orchard Pears / Bitter Greens / Granola" },
+            { item: "Brodetto di Pesce", price: "$9", description: "Adriatic Seafood Soup / Clams / Prawns" },
+            { item: "Filet Mignon", price: "$32", description: "Grilled beef tenderloin / Truffle mash / Red wine sauce" },
+            { item: "Lobster Bisque", price: "$15", description: "Creamy lobster soup / Herbs / Sherry" },
+            { item: "Duck Confit", price: "$27", description: "Slow-cooked duck leg / Garlic potatoes / Red cabbage" },
+            { item: "Chocolate Lava Cake", price: "$10", description: "Rich molten chocolate cake / Vanilla ice cream" },
+            { item: "Seared Scallops", price: "$24", description: "Pan-seared scallops / Cauliflower puree / Lemon butter sauce" },
+            { item: "Truffle Risotto", price: "$18", description: "Arborio rice / Truffle oil / Parmesan cheese" },
+            { item: "Foie Gras", price: "$30", description: "Pan-seared duck liver / Brioche toast / Fig jam" },
+            { item: "Tiramisu", price: "$12", description: "Classic Italian dessert with coffee-soaked ladyfingers and mascarpone" }
+        ]
+    },
+    {
+        name: "Raw Bites",
+        description: "Quick and delicious fast food options for an on-the-go meal.",
+        menu: [
+            { item: "Cheeseburger", price: "$8", description: "Juicy beef patty with cheese and toppings." },
+            { item: "Fries", price: "$3", description: "Crispy golden fries." },
+            { item: "Chicken Nuggets", price: "$6", description: "Crispy breaded chicken bites with dipping sauce." },
+            { item: "Veggie Wrap", price: "$7", description: "Whole wheat wrap / Grilled veggies / Hummus" },
+            { item: "Milkshake", price: "$5", description: "Thick and creamy milkshake available in chocolate, vanilla, or strawberry." },
+            { item: "Hot Dog", price: "$6", description: "Grilled beef hot dog / Soft bun / Toppings of choice" },
+            { item: "BBQ Chicken Sandwich", price: "$9", description: "Grilled chicken / BBQ sauce / Brioche bun" },
+            { item: "Mozzarella Sticks", price: "$7", description: "Crispy breaded mozzarella cheese with marinara sauce" },
+            { item: "Onion Rings", price: "$4", description: "Golden crispy onion rings with ranch dip" },
+            { item: "Double Patty Burger", price: "$12", description: "Two beef patties / Cheddar cheese / Special sauce" }
+        ]
+    },
+    {
+        name: "Cozy Café",
+        description: "Relax and enjoy fresh coffee, pastries, and a warm atmosphere.",
+        menu: [
+            { item: "Coffee", price: "$5", description: "Freshly brewed coffee." },
+            { item: "Croissant", price: "$4", description: "Flaky and buttery croissant." },
+            { item: "Cappuccino", price: "$6", description: "Espresso / Steamed milk / Foam" },
+            { item: "Blueberry Muffin", price: "$4", description: "Soft muffin filled with fresh blueberries." },
+            { item: "Avocado Toast", price: "$9", description: "Sourdough bread / Smashed avocado / Poached egg" },
+            { item: "Matcha Latte", price: "$7", description: "Smooth and creamy matcha green tea latte." },
+            { item: "Bagel with Cream Cheese", price: "$5", description: "Toasted bagel with rich cream cheese" },
+            { item: "Strawberry Cheesecake", price: "$8", description: "Creamy cheesecake topped with fresh strawberries" },
+            { item: "Chocolate Chip Cookie", price: "$3", description: "Soft and chewy cookie with melted chocolate chips" },
+            { item: "Iced Caramel Macchiato", price: "$6", description: "Espresso / Caramel / Milk / Ice" }
+        ]
+    }
+];
+
+       function getRestaurantDetails() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const restaurantName = urlParams.get('name');
+    const restaurant = restaurants.find(r => r.name === restaurantName);
+
+    if (restaurant) {
+        document.getElementById('restaurant-details').innerHTML = `
+            <h1 class="display-4">${restaurant.name}</h1>
+            <p class="lead">${restaurant.description}</p>
+        `;
+
+        restaurant.menu.forEach(item => {
+            document.getElementById('menu').innerHTML += `
+                <div class="col">
+                    <h2 class="h5 fw-semibold">${item.item} / ${item.price}</h2>
+                    <p class="text-white">${item.description}</p>
+                </div>
+            `;
+        });
+    } else {
+        document.getElementById('restaurant-details').innerHTML = `
+            <h1 class="display-4">Restaurant Not Found</h1>
+        `;
+    }
+}
+
+window.onload = getRestaurantDetails;
+    </script>
+</body>
+</html>

@@ -24,10 +24,13 @@
 
 .hero h1{
     text-shadow:2px 3px 4px black;
+    font-size: 2rem;
     
 }
 .hero p{
     text-shadow:2px 3px 4px black;
+    font-size: 2rem;
+
     
 }
 .overlay {
