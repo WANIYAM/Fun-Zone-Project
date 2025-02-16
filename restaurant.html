@@ -5,6 +5,16 @@
     <title>Restaurant Details</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/global.css">
+    
+<style>
+    .dish-image {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #fff;
+    }
+</style>
 </head>
 <body>
     <div class="container py-5">
@@ -66,33 +76,37 @@
     }
 ];
 
-       function getRestaurantDetails() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const restaurantName = urlParams.get('name');
-    const restaurant = restaurants.find(r => r.name === restaurantName);
 
-    if (restaurant) {
-        document.getElementById('restaurant-details').innerHTML = `
-            <h1 class="display-4">${restaurant.name}</h1>
-            <p class="lead">${restaurant.description}</p>
-        `;
+    function getRestaurantDetails() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const restaurantName = urlParams.get('name');
+        const restaurant = restaurants.find(r => r.name === restaurantName);
 
-        restaurant.menu.forEach(item => {
-            document.getElementById('menu').innerHTML += `
-                <div class="col">
-                    <h2 class="h5 fw-semibold">${item.item} / ${item.price}</h2>
-                    <p class="text-white">${item.description}</p>
-                </div>
+        if (restaurant) {
+            document.getElementById('restaurant-details').innerHTML = `
+                <h1 class="display-4">${restaurant.name}</h1>
+                <p class="lead">${restaurant.description}</p>
             `;
-        });
-    } else {
-        document.getElementById('restaurant-details').innerHTML = `
-            <h1 class="display-4">Restaurant Not Found</h1>
-        `;
-    }
-}
 
-window.onload = getRestaurantDetails;
+            restaurant.menu.forEach(item => {
+                document.getElementById('menu').innerHTML += `
+                    <div class="col text-center">
+                        <img src="assets/images/${item.item.toLowerCase().replace(/\s+/g, '-')}.jpg" class="dish-image" alt="${item.item}">
+                        <h2 class="h5 fw-semibold mt-2">${item.item} / ${item.price}</h2>
+                        <p class="text-white">${item.description}</p>
+                    </div>
+                `;
+            });
+        } else {
+            document.getElementById('restaurant-details').innerHTML = `
+                <h1 class="display-4">Restaurant Not Found</h1>
+            `;
+        }
+    }
+
+    window.onload = getRestaurantDetails;
+
+
     </script>
 </body>
 </html>
