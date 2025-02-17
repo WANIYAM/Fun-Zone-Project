@@ -38,3 +38,21 @@
         font-size: 1em;
     }
 }
+@media (max-width: 768px) {
+    .hero {
+        height: 60vh;
+        padding: 20px;
+    }
+
+    .overlay h1 {
+        font-size: 1.8rem;
+    }
+
+    .overlay p {
+        font-size: 1rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
