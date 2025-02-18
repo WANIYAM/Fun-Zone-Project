@@ -22,8 +22,7 @@
     height: 15%;
     z-index: 1000;
     margin:0;
-    background-color: rgb(26, 9, 30);
-
+    background-color: rgba(43, 6, 51, 0.772);
 }
 
 .logo img {

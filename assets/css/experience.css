@@ -14,8 +14,7 @@
             height: 15%;
             z-index: 1000;
             margin:0;
-            background-color: rgb(26, 9, 30);
-
+            background-color: rgba(43, 6, 51, 0.772);
         }
 
         .logo img {
@@ -116,6 +115,7 @@ margin: 1.125rem 0 1.875rem 0;
 
 main > div p {
 line-height: 1.6;
+color: white;
 }
 
 main a {
@@ -168,27 +168,16 @@ background-position: center;
 .swiper-slide h2 {
 color: #fff;
 font-family: "Roboto", sans-serif;
-font-weight: 400;
+font-weight: bolder;
 font-size: 1.4rem;
 line-height: 1.4;
 margin-bottom: 0.625rem;
 padding: 0 0 0 1.563rem;
 text-transform: uppercase;
+text-shadow: 2px 3px 4px black;
 }
 
-.swiper-slide p {
-color: #dadada;
-font-family: "Roboto", sans-serif;
-font-weight: 300;
-padding: 0 1.563rem;
-line-height: 1.6;
-font-size: 0.75rem;
-display: -webkit-box; /* Use -webkit-box for compatibility */
--webkit-box-orient: vertical; /* Set the box orientation */
-overflow: hidden; /* Hide overflow */
--webkit-line-clamp: 4; /* Limit to 4 lines */
-line-clamp: 4; /* Standard property (not widely supported) */
-}
+
 
 .swiper-slide a {
 margin: 1.25rem 1.563rem 3.438rem 1.563rem;

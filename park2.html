@@ -13,6 +13,73 @@
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Roboto:wght@300;400;500;900&display=swap");
 
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px;
+            height: 15%;
+            z-index: 1000;
+            margin:0;
+            background-color: rgba(43, 6, 51, 0.772);
+        }
+
+        .logo img {
+            height: 10vh;
+            margin-top: 0;
+        }
+
+        .menu-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        .menu-overlay a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5em;
+            margin: 20px 0;
+        }
+
+        .menu-overlay .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2em;
+            cursor: pointer;
+        }
+
+        .overlay-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .menu i {
+            font-size: 1.5em;
+        }
+  
 
         main {
             position: relative;
@@ -157,14 +224,9 @@
             }
         }
 
-        .section-map {
-    text-align: center;
-    padding: 40px 20px;
-    /* background-color: #f0f8ff; Light background color */
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+       
 
-}
+
 
 .story-container {
             display: flex;
@@ -199,6 +261,7 @@
     </style>
 </head>
 <body>
+    
     <div class="overlay">
         <div class="container overlay-container py-0">
             <!-- Logo on the Left -->
@@ -252,7 +315,7 @@
         </div>
 
         <!-- Story on the right -->
-        <div class="col-md-6 story-text">
+        <div class="col-md-6 story-text " id="Benny">
             <h2  data-aos="fade-left"style="font-size: 50px;">Benny the Bear – The Foodie King</h2>
             <p  data-aos="fade-left">
                 Benny has a nose for the best flavors in FunZone! As a cub, he loved baking treats for his forest friends, and now he runs 
@@ -270,7 +333,7 @@
 <div class="container text-white">
     <div class="row story-container2">
         <!-- Story on the left -->
-        <div class="col-md-6 story-text2">
+        <div class="col-md-6 story-text2" id="Flora">
             <h2  data-aos="fade-right" style="font-size: 50px;">Flora the Fairy – Guardian of Greenery</h2>
             <p  data-aos="fade-right">
                 Flora is a magical fairy who watches over the beautiful gardens and nature in FunZone. With a wave of her wand, she makes flowers bloom instantly and trees whisper in the wind.
@@ -298,7 +361,7 @@
         </div>
 
         <!-- Story on the right -->
-        <div class="col-md-6 story-text text-white">
+        <div class="col-md-6 story-text text-white" id="Luna">
             <h2  data-aos="fade-left" style="font-size: 50px;">Luna the Star Performer – The Showstopper</h2>
             <p>
                 Luna is a dazzling white rabbit with a talent for magic and music. She once dreamed of being the biggest star in FunZone, so she practiced every night under the glowing moon. 
@@ -316,7 +379,7 @@
 <div class="container text-white">
     <div class="row story-container2">
         <!-- Story on the left -->
-        <div class="col-md-6 story-text2">
+        <div class="col-md-6 story-text2" id="Thunder">
             <h2  data-aos="fade-right" style="font-size: 50px;">The Legend of Thunder Whirl</h2>
             <p  data-aos="fade-right">
                 Long ago, a fearless explorer named Captain Gale discovered a hidden blueprint for the ultimate ride—one that could harness the power of wind and lightning. With the help of Zippy the Fox and Robo the Squirrel, he built <strong>Thunder Whirl,</strong> a high-speed roller coaster filled with loops, tunnels, and powerful gusts of wind.</p>
@@ -342,7 +405,7 @@
         </div>
 
         <!-- Story on the right -->
-        <div class="col-md-6 story-text">
+        <div class="col-md-6 story-text" id="Robo">
             <h2  data-aos="fade-left" style="font-size: 50px;">Robo the Inventor Squirrel – The Genius Gamer</h2>
             <p>
                 Robo is a tech-savvy squirrel who loves building fun and futuristic games. With his tiny paws and brilliant mind, he created <strong> Robo’s Arcade World,</strong> a zone filled with interactive games, VR adventures, and robotic challenges. </p>
@@ -403,8 +466,19 @@
     </div>
 </footer>
 
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
+// Menu button functionality
+const menuButton = document.getElementById("menu-button");
+        const menuOverlay = document.getElementById("menu-overlay");
+        const closeButton = document.getElementById("close-btn");
+
+        menuButton.addEventListener("click", () => {
+            menuOverlay.style.display = "flex";
+        });
+
+        closeButton.addEventListener("click", () => {
+            menuOverlay.style.display = "none";
+        });
 
 
         // Array of objects containing aquatic animal data
@@ -413,31 +487,31 @@
                 name: " Benny the Bear – The Foodie King",
                 description: "",
                 imageUrl: "food.webp",
-                link: "food.webp"
+                link: "#Benny"
             },
             {
                 name: "Flora the Fairy – The Guardian of Greenery",
                 description: "",
                 imageUrl: "girlnature.jpg",
-                link: "girlnature.jpg"
+                link: "#Flora"
             },
             {
                 name: " Luna the Star Performer ",
                 description: "",
                 imageUrl: "liveshow.jpg",
-                link: "live show.jpg"
+                link: "#Luna"
             },
             {
                 name: "The Legend of Thunder Whirl",
                 description: " ",
                 imageUrl: "rides.webp",
-                link: "rides.webp"
+                link: "#Thunder"
             },
             {
                 name: " Robo the Inventor Squirrel – The Genius Gamer",
                 description: "",
                 imageUrl: "games.jpeg",
-                link: "food.webp"
+                link: "#Robo"
             },
             
         ];
@@ -453,7 +527,7 @@
                     <div>
                         <h2>${animal.name}</h2>
                         <p class="text-black">${animal.description}</p>
-                        <a href="${animal.link}" target="_blank">explore</a>
+                        <a href="${animal.link}">explore</a>
                     </div>
                 `;
                 swiperWrapper.appendChild(slide);
@@ -511,14 +585,6 @@
 
 
 </script>
-
-  
-  
-  <div class="email-icon">
-    <i class="bi bi-envelope"></i>
-  </div>
-  
-
 <script>
     AOS.init();
   </script>
